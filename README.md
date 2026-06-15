@@ -8,6 +8,7 @@ This repository intentionally does **not** publish full manuscript drafts, LaTeX
 
 - `papers/paper4-efe-tool-selection/experiments/real_tool_benchmark.py`: self-contained executable function-calling benchmark.
 - `papers/paper4-efe-tool-selection/experiments/external_function_call_adapter.py`: normalized/BFCL-like/API-Bank-like JSONL adapter smoke test.
+- `papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py`: run-time downloader and schema-routing diagnostic for official BFCL v3 simple rows.
 - `papers/paper4-efe-tool-selection/experiments/fixtures/bfcl_api_bank_style_sample.jsonl`: small public fixture for adapter verification.
 - `papers/paper4-efe-tool-selection/experiments/results/`: generated JSON result artifacts.
 
@@ -29,9 +30,10 @@ External adapter smoke test:
 
 ```bash
 python papers/paper4-efe-tool-selection/experiments/external_function_call_adapter.py --rounds 20 --seed 42 --trace-limit 12
+python papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py --limit 100 --runs 10 --seed 42 --trace-limit 12
 ```
 
-These are BFCL/API-Bank-style local artifacts. They are not official BFCL, ToolBench, API-Bank, APIBench, or AgentBench scores.
+These are BFCL/API-Bank-style local artifacts and external schema-routing diagnostics. They are not official BFCL, ToolBench, API-Bank, APIBench, or AgentBench scores.
 
 ## Repository Boundary
 
