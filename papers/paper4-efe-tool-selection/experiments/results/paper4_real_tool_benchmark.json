@@ -1,0 +1,6756 @@
+{
+  "metadata": {
+    "benchmark_type": "local_executable_function_calling",
+    "description": "Paper 4 local executable function-calling benchmark",
+    "num_task_templates": 18,
+    "num_tools": 6,
+    "positioning": "BFCL/APIBench-style local artifact with executable Python tools; not an official BFCL, ToolBench, APIBench, or AgentBench score.",
+    "runs": 50,
+    "seed": 42,
+    "trials_per_run": 240
+  },
+  "runs": [
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383879096393973,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674950737675435,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5345622119815668,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01837155954048465,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17916666666666667,
+      "exact_tool_rate": 0.17916666666666667,
+      "execution_success_rate": 0.17916666666666667,
+      "reward": 43,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674853457593155,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8458333333333333,
+      "exact_tool_rate": 0.8458333333333333,
+      "execution_success_rate": 0.8458333333333333,
+      "reward": 203,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5829493087557603,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.125,
+      "exact_tool_rate": 0.125,
+      "execution_success_rate": 0.125,
+      "reward": 30,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.020548259962892893,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2675019575199612,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8333333333333334,
+      "exact_tool_rate": 0.8333333333333334,
+      "execution_success_rate": 0.8333333333333334,
+      "reward": 200,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5380952380952381,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.019149697905843997,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17083333333333334,
+      "exact_tool_rate": 0.17083333333333334,
+      "execution_success_rate": 0.17083333333333334,
+      "reward": 41,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748539970343777,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8583333333333333,
+      "exact_tool_rate": 0.8583333333333333,
+      "execution_success_rate": 0.8583333333333333,
+      "reward": 206,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.6278538812785388,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01914754863267441,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674688763669053,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8833333333333333,
+      "exact_tool_rate": 0.8833333333333333,
+      "execution_success_rate": 0.8833333333333333,
+      "reward": 212,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.6049107142857143,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.02475841522073845,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.19583333333333333,
+      "exact_tool_rate": 0.19583333333333333,
+      "execution_success_rate": 0.19583333333333333,
+      "reward": 47,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.267502068796639,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5277777777777778,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.019106444766008902,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.11666666666666667,
+      "exact_tool_rate": 0.11666666666666667,
+      "execution_success_rate": 0.11666666666666667,
+      "reward": 28,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674593093837512,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8791666666666667,
+      "exact_tool_rate": 0.8791666666666667,
+      "execution_success_rate": 0.8791666666666667,
+      "reward": 211,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5384615384615384,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.015853543937682214,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748540087821354,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8333333333333334,
+      "exact_tool_rate": 0.8333333333333334,
+      "execution_success_rate": 0.8333333333333334,
+      "reward": 200,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.569047619047619,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.017873134263897406,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.19583333333333333,
+      "exact_tool_rate": 0.19583333333333333,
+      "execution_success_rate": 0.19583333333333333,
+      "reward": 47,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9541666666666666,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674756740668472,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8875,
+      "exact_tool_rate": 0.8875,
+      "execution_success_rate": 0.8875,
+      "reward": 213,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.6076233183856502,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.017439439965301968,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.12083333333333333,
+      "exact_tool_rate": 0.12083333333333333,
+      "execution_success_rate": 0.12083333333333333,
+      "reward": 29,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26745898650905864,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8541666666666666,
+      "exact_tool_rate": 0.8541666666666666,
+      "execution_success_rate": 0.8541666666666666,
+      "reward": 205,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5358851674641149,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1625,
+      "exact_tool_rate": 0.1625,
+      "execution_success_rate": 0.1625,
+      "reward": 39,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.011678316270634396,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17916666666666667,
+      "exact_tool_rate": 0.17916666666666667,
+      "execution_success_rate": 0.17916666666666667,
+      "reward": 43,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26747561790906743,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8583333333333333,
+      "exact_tool_rate": 0.8583333333333333,
+      "execution_success_rate": 0.8583333333333333,
+      "reward": 206,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5570776255707762,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.12916666666666668,
+      "exact_tool_rate": 0.12916666666666668,
+      "execution_success_rate": 0.12916666666666668,
+      "reward": 31,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.019637543067821055,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.10833333333333334,
+      "exact_tool_rate": 0.10833333333333334,
+      "execution_success_rate": 0.10833333333333334,
+      "reward": 26,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9375,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674762215477943,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5938967136150235,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.015738396853189854,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.3038329190205678,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.267440274209122,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8541666666666666,
+      "exact_tool_rate": 0.8541666666666666,
+      "execution_success_rate": 0.8541666666666666,
+      "reward": 205,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5231481481481481,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.018477651860373624,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.175,
+      "exact_tool_rate": 0.175,
+      "execution_success_rate": 0.175,
+      "reward": 42,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674687145172866,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8458333333333333,
+      "exact_tool_rate": 0.8458333333333333,
+      "execution_success_rate": 0.8458333333333333,
+      "reward": 203,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5657276995305164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01217116260330181,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26745909339775925,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5717592592592593,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01230031306506996,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26749256318100806,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8541666666666666,
+      "exact_tool_rate": 0.8541666666666666,
+      "execution_success_rate": 0.8541666666666666,
+      "reward": 205,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5210280373831776,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.12083333333333333,
+      "exact_tool_rate": 0.12083333333333333,
+      "execution_success_rate": 0.12083333333333333,
+      "reward": 29,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.019109729887797283,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15,
+      "exact_tool_rate": 0.15,
+      "execution_success_rate": 0.15,
+      "reward": 36,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.3038344071158059,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26746652989913206,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8708333333333333,
+      "exact_tool_rate": 0.8708333333333333,
+      "execution_success_rate": 0.8708333333333333,
+      "reward": 209,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5251141552511416,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.014869086394352577,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17916666666666667,
+      "exact_tool_rate": 0.17916666666666667,
+      "execution_success_rate": 0.17916666666666667,
+      "reward": 43,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9541666666666666,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748529079839745,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8833333333333333,
+      "exact_tool_rate": 0.8833333333333333,
+      "execution_success_rate": 0.8833333333333333,
+      "reward": 212,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5337837837837838,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.03265372135848039,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.19583333333333333,
+      "exact_tool_rate": 0.19583333333333333,
+      "execution_success_rate": 0.19583333333333333,
+      "reward": 47,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674925114112055,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.85,
+      "exact_tool_rate": 0.85,
+      "execution_success_rate": 0.85,
+      "reward": 204,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5801886792452831,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.021891380807229896,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1875,
+      "exact_tool_rate": 0.1875,
+      "execution_success_rate": 0.1875,
+      "reward": 45,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26749261616831405,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8583333333333333,
+      "exact_tool_rate": 0.8583333333333333,
+      "execution_success_rate": 0.8583333333333333,
+      "reward": 206,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5953488372093023,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.10833333333333334,
+      "exact_tool_rate": 0.10833333333333334,
+      "execution_success_rate": 0.10833333333333334,
+      "reward": 26,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.016763426963088697,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748555972896776,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8458333333333333,
+      "exact_tool_rate": 0.8458333333333333,
+      "execution_success_rate": 0.8458333333333333,
+      "reward": 203,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5949074074074074,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.026998198482180616,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.175,
+      "exact_tool_rate": 0.175,
+      "execution_success_rate": 0.175,
+      "reward": 42,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9375,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748561588674746,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5294117647058824,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1375,
+      "exact_tool_rate": 0.1375,
+      "execution_success_rate": 0.1375,
+      "reward": 33,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.016224923992992545,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.3038344071158059,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674661464968687,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8416666666666667,
+      "exact_tool_rate": 0.8416666666666667,
+      "execution_success_rate": 0.8416666666666667,
+      "reward": 202,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5260663507109005,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.014301111276436313,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674687694782047,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8458333333333333,
+      "exact_tool_rate": 0.8458333333333333,
+      "execution_success_rate": 0.8458333333333333,
+      "reward": 203,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5255813953488372,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.015529464526326543,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.20416666666666666,
+      "exact_tool_rate": 0.20416666666666666,
+      "execution_success_rate": 0.20416666666666666,
+      "reward": 49,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748539970343777,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.85,
+      "exact_tool_rate": 0.85,
+      "execution_success_rate": 0.85,
+      "reward": 204,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5231481481481481,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.02476347453517274,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15,
+      "exact_tool_rate": 0.15,
+      "execution_success_rate": 0.15,
+      "reward": 36,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26747594707511274,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.825,
+      "exact_tool_rate": 0.825,
+      "execution_success_rate": 0.825,
+      "reward": 198,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5785714285714286,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.02042232102428562,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1625,
+      "exact_tool_rate": 0.1625,
+      "execution_success_rate": 0.1625,
+      "reward": 39,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2675021843005354,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8291666666666667,
+      "exact_tool_rate": 0.8291666666666667,
+      "execution_success_rate": 0.8291666666666667,
+      "reward": 199,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.6142857142857143,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.016257990258673954,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674688763669053,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5228310502283106,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1375,
+      "exact_tool_rate": 0.1375,
+      "execution_success_rate": 0.1375,
+      "reward": 33,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.012211473427875421,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674594810454273,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5412844036697247,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.021073188226922966,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.3038329190205678,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674736278623576,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8791666666666667,
+      "exact_tool_rate": 0.8791666666666667,
+      "execution_success_rate": 0.8791666666666667,
+      "reward": 211,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5275229357798165,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1625,
+      "exact_tool_rate": 0.1625,
+      "execution_success_rate": 0.1625,
+      "reward": 39,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.013822740333986895,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.13333333333333333,
+      "exact_tool_rate": 0.13333333333333333,
+      "execution_success_rate": 0.13333333333333333,
+      "reward": 32,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26745947570063394,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8708333333333333,
+      "exact_tool_rate": 0.8708333333333333,
+      "execution_success_rate": 0.8708333333333333,
+      "reward": 209,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5520361990950227,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01299036763935065,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17916666666666667,
+      "exact_tool_rate": 0.17916666666666667,
+      "execution_success_rate": 0.17916666666666667,
+      "reward": 43,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674925653553277,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.6023255813953489,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.026418605301246553,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1625,
+      "exact_tool_rate": 0.1625,
+      "execution_success_rate": 0.1625,
+      "reward": 39,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26745932219467317,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8708333333333333,
+      "exact_tool_rate": 0.8708333333333333,
+      "execution_success_rate": 0.8708333333333333,
+      "reward": 209,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5247747747747747,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15416666666666667,
+      "exact_tool_rate": 0.15416666666666667,
+      "execution_success_rate": 0.15416666666666667,
+      "reward": 37,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.018779276396364463,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.175,
+      "exact_tool_rate": 0.175,
+      "execution_success_rate": 0.175,
+      "reward": 42,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674594227560555,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8708333333333333,
+      "exact_tool_rate": 0.8708333333333333,
+      "execution_success_rate": 0.8708333333333333,
+      "reward": 209,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.4696261682242991,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.018953768608250307,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26746892832895885,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5439814814814815,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.12916666666666668,
+      "exact_tool_rate": 0.12916666666666668,
+      "execution_success_rate": 0.12916666666666668,
+      "reward": 31,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.020605551312941957,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17916666666666667,
+      "exact_tool_rate": 0.17916666666666667,
+      "execution_success_rate": 0.17916666666666667,
+      "reward": 43,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9541666666666666,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26747561790906743,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8916666666666667,
+      "exact_tool_rate": 0.8916666666666667,
+      "execution_success_rate": 0.8916666666666667,
+      "reward": 214,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.531390134529148,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.12916666666666668,
+      "exact_tool_rate": 0.12916666666666668,
+      "execution_success_rate": 0.12916666666666668,
+      "reward": 31,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.0197075890225683,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748545482233577,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8666666666666667,
+      "exact_tool_rate": 0.8666666666666667,
+      "execution_success_rate": 0.8666666666666667,
+      "reward": 208,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.525,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15,
+      "exact_tool_rate": 0.15,
+      "execution_success_rate": 0.15,
+      "reward": 36,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.015969424512167627,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.20416666666666666,
+      "exact_tool_rate": 0.20416666666666666,
+      "execution_success_rate": 0.20416666666666666,
+      "reward": 49,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26749256318100806,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8666666666666667,
+      "exact_tool_rate": 0.8666666666666667,
+      "execution_success_rate": 0.8666666666666667,
+      "reward": 208,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5180180180180181,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01898563926386665,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.20416666666666666,
+      "exact_tool_rate": 0.20416666666666666,
+      "execution_success_rate": 0.20416666666666666,
+      "reward": 49,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.3038344071158059,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.267449733233788,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.6073059360730594,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.020150499256368352,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17916666666666667,
+      "exact_tool_rate": 0.17916666666666667,
+      "execution_success_rate": 0.17916666666666667,
+      "reward": 43,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748545482233577,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8416666666666667,
+      "exact_tool_rate": 0.8416666666666667,
+      "execution_success_rate": 0.8416666666666667,
+      "reward": 202,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5976190476190476,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15,
+      "exact_tool_rate": 0.15,
+      "execution_success_rate": 0.15,
+      "reward": 36,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01972594239694064,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17916666666666667,
+      "exact_tool_rate": 0.17916666666666667,
+      "execution_success_rate": 0.17916666666666667,
+      "reward": 43,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674761124454362,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8666666666666667,
+      "exact_tool_rate": 0.8666666666666667,
+      "execution_success_rate": 0.8666666666666667,
+      "reward": 208,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5568181818181818,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15,
+      "exact_tool_rate": 0.15,
+      "execution_success_rate": 0.15,
+      "reward": 36,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.013203586883950923,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674593138510152,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5275229357798165,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.018341548331299678,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26745904162795664,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8875,
+      "exact_tool_rate": 0.8875,
+      "execution_success_rate": 0.8875,
+      "reward": 213,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.541095890410959,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.0217986754787257,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9375,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383432667822546,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674498081560974,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8666666666666667,
+      "exact_tool_rate": 0.8666666666666667,
+      "execution_success_rate": 0.8666666666666667,
+      "reward": 208,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.545662100456621,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.01669796794453323,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.17083333333333334,
+      "exact_tool_rate": 0.17083333333333334,
+      "execution_success_rate": 0.17083333333333334,
+      "reward": 41,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674923385747535,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8333333333333334,
+      "exact_tool_rate": 0.8333333333333334,
+      "execution_success_rate": 0.8333333333333334,
+      "reward": 200,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.590047393364929,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.010983241158087232,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26749244767711156,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8583333333333333,
+      "exact_tool_rate": 0.8583333333333333,
+      "execution_success_rate": 0.8583333333333333,
+      "reward": 206,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.530373831775701,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.0146583383854772,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1875,
+      "exact_tool_rate": 0.1875,
+      "execution_success_rate": 0.1875,
+      "reward": 45,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.95,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383581477346355,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26747595142036235,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8708333333333333,
+      "exact_tool_rate": 0.8708333333333333,
+      "execution_success_rate": 0.8708333333333333,
+      "reward": 209,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5273972602739726,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.13333333333333333,
+      "exact_tool_rate": 0.13333333333333333,
+      "execution_success_rate": 0.13333333333333333,
+      "reward": 32,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.019143754013123546,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9541666666666666,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383879096393973,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674950737675435,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8708333333333333,
+      "exact_tool_rate": 0.8708333333333333,
+      "execution_success_rate": 0.8708333333333333,
+      "reward": 209,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5271493212669683,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14166666666666666,
+      "exact_tool_rate": 0.14166666666666666,
+      "execution_success_rate": 0.14166666666666666,
+      "reward": 34,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.025219841787550053,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9458333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383730286870164,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26748567942859036,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5864485981308412,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.14583333333333334,
+      "exact_tool_rate": 0.14583333333333334,
+      "execution_success_rate": 0.14583333333333334,
+      "reward": 35,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.014921325878822712,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1875,
+      "exact_tool_rate": 0.1875,
+      "execution_success_rate": 0.1875,
+      "reward": 45,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.9416666666666667,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.3038344071158059,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.26745004206942546,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8708333333333333,
+      "exact_tool_rate": 0.8708333333333333,
+      "execution_success_rate": 0.8708333333333333,
+      "reward": 209,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.5560747663551402,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15,
+      "exact_tool_rate": 0.15,
+      "execution_success_rate": 0.15,
+      "reward": 36,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.014589192283541897,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.16666666666666666,
+      "exact_tool_rate": 0.16666666666666666,
+      "execution_success_rate": 0.16666666666666666,
+      "reward": 40,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    }
+  ],
+  "summary": {
+    "contextual_efe_discounted_we_0.45": {
+      "exact_result_rate_mean": 0.875,
+      "exact_tool_rate_mean": 0.875,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.875,
+      "reward_mean": 210.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.267476069621156,
+      "unique_tools_mean": 6.0
+    },
+    "contextual_efe_static_we_0.45": {
+      "exact_result_rate_mean": 0.875,
+      "exact_tool_rate_mean": 0.875,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.875,
+      "reward_mean": 210.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.30383621133073513,
+      "unique_tools_mean": 6.0
+    },
+    "contextual_epsilon_0.10": {
+      "exact_result_rate_mean": 0.8616666666666667,
+      "exact_tool_rate_mean": 0.8616666666666667,
+      "exact_tool_rate_std": 0.01578941276791368,
+      "execution_success_rate_mean": 0.8616666666666667,
+      "reward_mean": 206.8,
+      "reward_std": 3.789459064299283,
+      "score_margin_mean": 0.5535703586845887,
+      "unique_tools_mean": 6.0
+    },
+    "contextual_ucb_2.0": {
+      "exact_result_rate_mean": 0.45,
+      "exact_tool_rate_mean": 0.45,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.45,
+      "reward_mean": 108.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools_mean": 6.0
+    },
+    "global_efe_we_0.45": {
+      "exact_result_rate_mean": 0.14616666666666667,
+      "exact_tool_rate_mean": 0.14616666666666667,
+      "exact_tool_rate_std": 0.011572236891226632,
+      "execution_success_rate_mean": 0.14616666666666667,
+      "reward_mean": 35.08,
+      "reward_std": 2.777336853894392,
+      "score_margin_mean": 0.018219755905337913,
+      "unique_tools_mean": 6.0
+    },
+    "random": {
+      "exact_result_rate_mean": 0.16583333333333333,
+      "exact_tool_rate_mean": 0.16583333333333333,
+      "exact_tool_rate_std": 0.021131203888509944,
+      "execution_success_rate_mean": 0.16583333333333333,
+      "reward_mean": 39.8,
+      "reward_std": 5.071488933242387,
+      "score_margin_mean": null,
+      "unique_tools_mean": 6.0
+    },
+    "schema_keyword_router": {
+      "exact_result_rate_mean": 1.0,
+      "exact_tool_rate_mean": 1.0,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 1.0,
+      "reward_mean": 240.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 1.9452500000000001,
+      "unique_tools_mean": 6.0
+    }
+  },
+  "tools": [
+    {
+      "description": "Compute sums, products, and percentages.",
+      "name": "calculator",
+      "schema": {
+        "properties": {
+          "operation": {
+            "enum": [
+              "sum",
+              "product",
+              "percentage"
+            ]
+          },
+          "values": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "operation",
+          "values"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "description": "Convert between temperature, distance, and mass units.",
+      "name": "unit_convert",
+      "schema": {
+        "properties": {
+          "from_unit": {
+            "type": "string"
+          },
+          "to_unit": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "value",
+          "from_unit",
+          "to_unit"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "description": "Compute absolute day distance between ISO dates.",
+      "name": "date_diff",
+      "schema": {
+        "properties": {
+          "end_date": {
+            "format": "date",
+            "type": "string"
+          },
+          "start_date": {
+            "format": "date",
+            "type": "string"
+          }
+        },
+        "required": [
+          "start_date",
+          "end_date"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "description": "Count characters, words, and unique words in text.",
+      "name": "text_stats",
+      "schema": {
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "description": "Read a dot-path value from a JSON-like object.",
+      "name": "json_lookup",
+      "schema": {
+        "properties": {
+          "document": {
+            "type": "object"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "document",
+          "path"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "description": "Rank support tickets by priority and age.",
+      "name": "ticket_ranker",
+      "schema": {
+        "properties": {
+          "tickets": {
+            "items": {
+              "properties": {
+                "age_hours": {
+                  "type": "integer"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "priority": {
+                  "enum": [
+                    "critical",
+                    "high",
+                    "medium",
+                    "low"
+                  ]
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "tickets"
+        ],
+        "type": "object"
+      }
+    }
+  ],
+  "trace_samples": {
+    "contextual_efe_discounted_we_0.45": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read metrics.latency.p95 from the service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 0,
+        "task_id": "json_latency",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read user.plan.tier from the JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 1,
+        "task_id": "json_plan",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 12.5 kilometers to miles.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 2,
+        "task_id": "unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count words and unique words in: tool learning needs real calls.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 3,
+        "task_id": "text_brief",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 180 pounds to kilograms.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 4,
+        "task_id": "unit_weight",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "Compute the day gap from 2026-01-01 to 2026-06-15.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 5,
+        "task_id": "date_release_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Order tickets, breaking ties by older age first.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 6,
+        "task_id": "ticket_age",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-08-29?",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 7,
+        "task_id": "date_workshop_gap",
+        "tool_output": {
+          "days": 75
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Analyze word counts for: route tools, learn tools, verify tools.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 8,
+        "task_id": "text_repeated",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 9,
+        "task_id": "ticket_incident",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Find 15 percent of 240 for a discount calculation.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 10,
+        "task_id": "math_discount",
+        "tool_output": {
+          "value": 36.0
+        }
+      },
+      {
+        "error": "Missing required argument: document",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: exact traces make routing auditable.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.2272727272727273,
+          "date_diff": 0.225,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 11,
+        "task_id": "text_trace",
+        "tool_output": null
+      }
+    ],
+    "contextual_efe_static_we_0.45": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read metrics.latency.p95 from the service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 0,
+        "task_id": "json_latency",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read user.plan.tier from the JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 1,
+        "task_id": "json_plan",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 12.5 kilometers to miles.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 2,
+        "task_id": "unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count words and unique words in: tool learning needs real calls.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 3,
+        "task_id": "text_brief",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 180 pounds to kilograms.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 4,
+        "task_id": "unit_weight",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "Compute the day gap from 2026-01-01 to 2026-06-15.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 5,
+        "task_id": "date_release_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Order tickets, breaking ties by older age first.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 6,
+        "task_id": "ticket_age",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-08-29?",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 7,
+        "task_id": "date_workshop_gap",
+        "tool_output": {
+          "days": 75
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Analyze word counts for: route tools, learn tools, verify tools.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 8,
+        "task_id": "text_repeated",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 9,
+        "task_id": "ticket_incident",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Find 15 percent of 240 for a discount calculation.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 10,
+        "task_id": "math_discount",
+        "tool_output": {
+          "value": 36.0
+        }
+      },
+      {
+        "error": "Missing required argument: document",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: exact traces make routing auditable.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 11,
+        "task_id": "text_trace",
+        "tool_output": null
+      }
+    ],
+    "contextual_epsilon_0.10": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read metrics.latency.p95 from the service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 0,
+        "task_id": "json_latency",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read user.plan.tier from the JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 1,
+        "task_id": "json_plan",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 12.5 kilometers to miles.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 2,
+        "task_id": "unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count words and unique words in: tool learning needs real calls.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 3,
+        "task_id": "text_brief",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 180 pounds to kilograms.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 4,
+        "task_id": "unit_weight",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "Compute the day gap from 2026-01-01 to 2026-06-15.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 5,
+        "task_id": "date_release_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Order tickets, breaking ties by older age first.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 6,
+        "task_id": "ticket_age",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-08-29?",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 7,
+        "task_id": "date_workshop_gap",
+        "tool_output": {
+          "days": 75
+        }
+      },
+      {
+        "error": "Missing required argument: document",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Analyze word counts for: route tools, learn tools, verify tools.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 8,
+        "task_id": "text_repeated",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 9,
+        "task_id": "ticket_incident",
+        "tool_output": {
+          "ordered_ids": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Find 15 percent of 240 for a discount calculation.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 10,
+        "task_id": "math_discount",
+        "tool_output": {
+          "value": 36.0
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: exact traces make routing auditable.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.5,
+          "json_lookup": 0.0,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 11,
+        "task_id": "text_trace",
+        "tool_output": null
+      }
+    ],
+    "contextual_ucb_2.0": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read metrics.latency.p95 from the service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 0,
+        "task_id": "json_latency",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read user.plan.tier from the JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 1,
+        "task_id": "json_plan",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 12.5 kilometers to miles.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 2,
+        "task_id": "unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count words and unique words in: tool learning needs real calls.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 3,
+        "task_id": "text_brief",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 180 pounds to kilograms.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 4,
+        "task_id": "unit_weight",
+        "tool_output": {
+          "value": 81.6467
+        }
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "Compute the day gap from 2026-01-01 to 2026-06-15.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 5,
+        "task_id": "date_release_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Order tickets, breaking ties by older age first.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 6,
+        "task_id": "ticket_age",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-08-29?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 7,
+        "task_id": "date_workshop_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Analyze word counts for: route tools, learn tools, verify tools.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 8,
+        "task_id": "text_repeated",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 9,
+        "task_id": "ticket_incident",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Find 15 percent of 240 for a discount calculation.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 10,
+        "task_id": "math_discount",
+        "tool_output": {
+          "value": 36.0
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: exact traces make routing auditable.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 11,
+        "task_id": "text_trace",
+        "tool_output": null
+      }
+    ],
+    "global_efe_we_0.45": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read metrics.latency.p95 from the service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 0,
+        "task_id": "json_latency",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read user.plan.tier from the JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 1,
+        "task_id": "json_plan",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: document",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 12.5 kilometers to miles.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 2,
+        "task_id": "unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count words and unique words in: tool learning needs real calls.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 3,
+        "task_id": "text_brief",
+        "tool_output": {
+          "characters": 30,
+          "unique_words": 5,
+          "words": 5
+        }
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 180 pounds to kilograms.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.775,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 4,
+        "task_id": "unit_weight",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: tickets",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "Compute the day gap from 2026-01-01 to 2026-06-15.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.42500000000000004,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 5,
+        "task_id": "date_release_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Order tickets, breaking ties by older age first.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.42500000000000004,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 6,
+        "task_id": "ticket_age",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-08-29?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.42500000000000004,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 7,
+        "task_id": "date_workshop_gap",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Analyze word counts for: route tools, learn tools, verify tools.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.29583333333333334,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 8,
+        "task_id": "text_repeated",
+        "tool_output": {
+          "characters": 38,
+          "unique_words": 4,
+          "words": 6
+        }
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.36500000000000005,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 9,
+        "task_id": "ticket_incident",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Find 15 percent of 240 for a discount calculation.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.29500000000000004,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 10,
+        "task_id": "math_discount",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: exact traces make routing auditable.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.24761904761904763,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 11,
+        "task_id": "text_trace",
+        "tool_output": {
+          "characters": 35,
+          "unique_words": 5,
+          "words": 5
+        }
+      }
+    ],
+    "random": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read metrics.latency.p95 from the service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 0,
+        "task_id": "json_latency",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read user.plan.tier from the JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 1,
+        "task_id": "json_plan",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 12.5 kilometers to miles.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 2,
+        "task_id": "unit_distance",
+        "tool_output": {
+          "value": 7.7671
+        }
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count words and unique words in: tool learning needs real calls.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 3,
+        "task_id": "text_brief",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: document",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 180 pounds to kilograms.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 4,
+        "task_id": "unit_weight",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "Compute the day gap from 2026-01-01 to 2026-06-15.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 5,
+        "task_id": "date_release_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Order tickets, breaking ties by older age first.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 6,
+        "task_id": "ticket_age",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-08-29?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 7,
+        "task_id": "date_workshop_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Analyze word counts for: route tools, learn tools, verify tools.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 8,
+        "task_id": "text_repeated",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 9,
+        "task_id": "ticket_incident",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Find 15 percent of 240 for a discount calculation.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 10,
+        "task_id": "math_discount",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: exact traces make routing auditable.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 11,
+        "task_id": "text_trace",
+        "tool_output": null
+      }
+    ],
+    "schema_keyword_router": [
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read metrics.latency.p95 from the service JSON.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 243
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 2.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 0,
+        "task_id": "json_latency",
+        "tool_output": {
+          "value": 243
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read user.plan.tier from the JSON profile.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "user": {
+                "plan": {
+                  "tier": "pro"
+                }
+              }
+            },
+            "path": "user.plan.tier"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 2.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 1,
+        "task_id": "json_plan",
+        "tool_output": {
+          "value": "pro"
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 12.5 kilometers to miles.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "kilometer",
+            "to_unit": "mile",
+            "value": 12.5
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 2.0
+        },
+        "step": 2,
+        "task_id": "unit_distance",
+        "tool_output": {
+          "value": 7.7671
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count words and unique words in: tool learning needs real calls.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tool learning needs real calls"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 2.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 3,
+        "task_id": "text_brief",
+        "tool_output": {
+          "characters": 30,
+          "unique_words": 5,
+          "words": 5
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 180 pounds to kilograms.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "pound",
+            "to_unit": "kilogram",
+            "value": 180
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 2.0
+        },
+        "step": 4,
+        "task_id": "unit_weight",
+        "tool_output": {
+          "value": 81.6467
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "Compute the day gap from 2026-01-01 to 2026-06-15.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-06-15",
+            "start_date": "2026-01-01"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 1.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 5,
+        "task_id": "date_release_gap",
+        "tool_output": {
+          "days": 165
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Order tickets, breaking ties by older age first.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 2,
+                "id": "A",
+                "priority": "high"
+              },
+              {
+                "age_hours": 9,
+                "id": "B",
+                "priority": "high"
+              },
+              {
+                "age_hours": 20,
+                "id": "C",
+                "priority": "low"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 2.0,
+          "unit_convert": 0.0
+        },
+        "step": 6,
+        "task_id": "ticket_age",
+        "tool_output": {
+          "ordered_ids": [
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-08-29?",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 2.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 7,
+        "task_id": "date_workshop_gap",
+        "tool_output": {
+          "days": 75
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Analyze word counts for: route tools, learn tools, verify tools.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "route tools, learn tools, verify tools"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 1.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 8,
+        "task_id": "text_repeated",
+        "tool_output": {
+          "characters": 38,
+          "unique_words": 4,
+          "words": 6
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 6,
+                "id": "T3",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 1,
+                "id": "T1",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 3,
+                "id": "T2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 3.0,
+          "unit_convert": 0.0
+        },
+        "step": 9,
+        "task_id": "ticket_incident",
+        "tool_output": {
+          "ordered_ids": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Find 15 percent of 240 for a discount calculation.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              240,
+              15
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 2.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 10,
+        "task_id": "math_discount",
+        "tool_output": {
+          "value": 36.0
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: exact traces make routing auditable.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "exact traces make routing auditable"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 2.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 11,
+        "task_id": "text_trace",
+        "tool_output": {
+          "characters": 35,
+          "unique_words": 5,
+          "words": 5
+        }
+      }
+    ]
+  }
+}

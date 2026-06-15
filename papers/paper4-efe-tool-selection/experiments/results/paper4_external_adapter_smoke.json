@@ -1,0 +1,3839 @@
+{
+  "metadata": {
+    "benchmark_type": "external_function_call_adapter",
+    "description": "Paper 4 external function-call adapter smoke test",
+    "executable_records": 12,
+    "input_path": "papers/paper4-efe-tool-selection/experiments/fixtures/bfcl_api_bank_style_sample.jsonl",
+    "positioning": "Adapter for normalized, BFCL-like, and API-Bank-like JSONL. This is a compatibility smoke test, not an official benchmark score.",
+    "records": 12,
+    "rounds": 20,
+    "seed": 42,
+    "skipped_records": 0,
+    "supported_formats": [
+      "normalized prompt/tools/expected_call JSONL",
+      "BFCL-like question/function/ground_truth JSONL",
+      "API-Bank-like context/api_list/api_call JSONL"
+    ],
+    "trials": 240
+  },
+  "normalized_samples": [
+    {
+      "case_id": "normalized_math_sum",
+      "expected_call": {
+        "arguments": {
+          "operation": "sum",
+          "values": [
+            10,
+            5,
+            2
+          ]
+        },
+        "tool": "calculator"
+      },
+      "expected_result": {
+        "value": 17.0
+      },
+      "family": "math",
+      "prompt": "Add invoice line items 10, 5, and 2."
+    },
+    {
+      "case_id": "normalized_unit_distance",
+      "expected_call": {
+        "arguments": {
+          "from_unit": "mile",
+          "to_unit": "kilometer",
+          "value": 5
+        },
+        "tool": "unit_convert"
+      },
+      "expected_result": {
+        "value": 8.0467
+      },
+      "family": "unit",
+      "prompt": "Convert 5 miles to kilometers."
+    },
+    {
+      "case_id": "bfcl_date_gap",
+      "expected_call": {
+        "arguments": {
+          "end_date": "2026-07-01",
+          "start_date": "2026-06-15"
+        },
+        "tool": "date_diff"
+      },
+      "expected_result": {
+        "days": 16
+      },
+      "family": "date",
+      "prompt": "How many days are between 2026-06-15 and 2026-07-01?"
+    },
+    {
+      "case_id": "bfcl_json_lookup",
+      "expected_call": {
+        "arguments": {
+          "document": {
+            "profile": {
+              "plan": {
+                "name": "research"
+              }
+            }
+          },
+          "path": "profile.plan.name"
+        },
+        "tool": "json_lookup"
+      },
+      "expected_result": {
+        "value": "research"
+      },
+      "family": "json",
+      "prompt": "Read profile.plan.name from this JSON profile."
+    },
+    {
+      "case_id": "bfcl_text_stats",
+      "expected_call": {
+        "arguments": {
+          "text": "tools learn from exact traces"
+        },
+        "tool": "text_stats"
+      },
+      "expected_result": {
+        "characters": 29,
+        "unique_words": 5,
+        "words": 5
+      },
+      "family": "text",
+      "prompt": "Count text statistics for: tools learn from exact traces."
+    },
+    {
+      "case_id": "bfcl_ticket_rank",
+      "expected_call": {
+        "arguments": {
+          "tickets": [
+            {
+              "age_hours": 9,
+              "id": "S2",
+              "priority": "medium"
+            },
+            {
+              "age_hours": 2,
+              "id": "S0",
+              "priority": "critical"
+            },
+            {
+              "age_hours": 5,
+              "id": "S1",
+              "priority": "high"
+            }
+          ]
+        },
+        "tool": "ticket_ranker"
+      },
+      "expected_result": {
+        "ordered_ids": [
+          "S0",
+          "S1",
+          "S2"
+        ]
+      },
+      "family": "ticket",
+      "prompt": "Rank these support tickets by urgency and age."
+    },
+    {
+      "case_id": "api_bank_calculator",
+      "expected_call": {
+        "arguments": {
+          "operation": "percentage",
+          "values": [
+            350,
+            20
+          ]
+        },
+        "tool": "calculator"
+      },
+      "expected_result": {
+        "value": 70.0
+      },
+      "family": "math",
+      "prompt": "The user asks for 20 percent of 350."
+    },
+    {
+      "case_id": "api_bank_unit_convert",
+      "expected_call": {
+        "arguments": {
+          "from_unit": "celsius",
+          "to_unit": "fahrenheit",
+          "value": 100
+        },
+        "tool": "unit_convert"
+      },
+      "expected_result": {
+        "value": 212.0
+      },
+      "family": "unit",
+      "prompt": "The user wants to convert 100 Celsius to Fahrenheit."
+    },
+    {
+      "case_id": "api_bank_date_diff",
+      "expected_call": {
+        "arguments": {
+          "end_date": "2026-08-29",
+          "start_date": "2026-08-01"
+        },
+        "tool": "date_diff"
+      },
+      "expected_result": {
+        "days": 28
+      },
+      "family": "date",
+      "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29."
+    },
+    {
+      "case_id": "api_bank_text_stats",
+      "expected_call": {
+        "arguments": {
+          "text": "routing tools requires evidence"
+        },
+        "tool": "text_stats"
+      },
+      "expected_result": {
+        "characters": 31,
+        "unique_words": 4,
+        "words": 4
+      },
+      "family": "text",
+      "prompt": "The user asks to count words in the sentence routing tools requires evidence."
+    },
+    {
+      "case_id": "api_bank_json_lookup",
+      "expected_call": {
+        "arguments": {
+          "document": {
+            "metrics": {
+              "latency": {
+                "p95": 188
+              }
+            }
+          },
+          "path": "metrics.latency.p95"
+        },
+        "tool": "json_lookup"
+      },
+      "expected_result": {
+        "value": 188
+      },
+      "family": "json",
+      "prompt": "The user wants metrics.latency.p95 from a service JSON."
+    },
+    {
+      "case_id": "api_bank_ticket_ranker",
+      "expected_call": {
+        "arguments": {
+          "tickets": [
+            {
+              "age_hours": 4,
+              "id": "I1",
+              "priority": "low"
+            },
+            {
+              "age_hours": 1,
+              "id": "I0",
+              "priority": "critical"
+            },
+            {
+              "age_hours": 8,
+              "id": "I2",
+              "priority": "high"
+            }
+          ]
+        },
+        "tool": "ticket_ranker"
+      },
+      "expected_result": {
+        "ordered_ids": [
+          "I0",
+          "I2",
+          "I1"
+        ]
+      },
+      "family": "ticket",
+      "prompt": "The user wants an incident queue ordered by severity."
+    }
+  ],
+  "runs": [
+    {
+      "exact_result_rate": 1.0,
+      "exact_tool_rate": 1.0,
+      "execution_success_rate": 1.0,
+      "reward": 240,
+      "router": "schema_keyword_router",
+      "score_margin_mean": 1.8333333333333333,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_static_we_0.45",
+      "score_margin_mean": 0.30383879096393973,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.875,
+      "exact_tool_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "reward": 210,
+      "router": "contextual_efe_discounted_we_0.45",
+      "score_margin_mean": 0.2674950737675435,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.8625,
+      "exact_tool_rate": 0.8625,
+      "execution_success_rate": 0.8625,
+      "reward": 207,
+      "router": "contextual_epsilon_0.10",
+      "score_margin_mean": 0.544392523364486,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.45,
+      "exact_tool_rate": 0.45,
+      "execution_success_rate": 0.45,
+      "reward": 108,
+      "router": "contextual_ucb_2.0",
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.1375,
+      "exact_tool_rate": 0.1375,
+      "execution_success_rate": 0.1375,
+      "reward": 33,
+      "router": "global_efe_we_0.45",
+      "score_margin_mean": 0.029929789029975087,
+      "unique_tools": 6
+    },
+    {
+      "exact_result_rate": 0.15833333333333333,
+      "exact_tool_rate": 0.15833333333333333,
+      "execution_success_rate": 0.15833333333333333,
+      "reward": 38,
+      "router": "random",
+      "score_margin_mean": null,
+      "unique_tools": 6
+    }
+  ],
+  "skipped": [],
+  "summary": {
+    "contextual_efe_discounted_we_0.45": {
+      "exact_result_rate_mean": 0.875,
+      "exact_tool_rate_mean": 0.875,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.875,
+      "reward_mean": 210.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.2674950737675435,
+      "unique_tools_mean": 6.0
+    },
+    "contextual_efe_static_we_0.45": {
+      "exact_result_rate_mean": 0.875,
+      "exact_tool_rate_mean": 0.875,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.875,
+      "reward_mean": 210.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.30383879096393973,
+      "unique_tools_mean": 6.0
+    },
+    "contextual_epsilon_0.10": {
+      "exact_result_rate_mean": 0.8625,
+      "exact_tool_rate_mean": 0.8625,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.8625,
+      "reward_mean": 207.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.544392523364486,
+      "unique_tools_mean": 6.0
+    },
+    "contextual_ucb_2.0": {
+      "exact_result_rate_mean": 0.45,
+      "exact_tool_rate_mean": 0.45,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.45,
+      "reward_mean": 108.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.13522805595016732,
+      "unique_tools_mean": 6.0
+    },
+    "global_efe_we_0.45": {
+      "exact_result_rate_mean": 0.1375,
+      "exact_tool_rate_mean": 0.1375,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.1375,
+      "reward_mean": 33.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 0.029929789029975087,
+      "unique_tools_mean": 6.0
+    },
+    "random": {
+      "exact_result_rate_mean": 0.15833333333333333,
+      "exact_tool_rate_mean": 0.15833333333333333,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 0.15833333333333333,
+      "reward_mean": 38.0,
+      "reward_std": 0.0,
+      "score_margin_mean": null,
+      "unique_tools_mean": 6.0
+    },
+    "schema_keyword_router": {
+      "exact_result_rate_mean": 1.0,
+      "exact_tool_rate_mean": 1.0,
+      "exact_tool_rate_std": 0.0,
+      "execution_success_rate_mean": 1.0,
+      "reward_mean": 240.0,
+      "reward_std": 0.0,
+      "score_margin_mean": 1.8333333333333333,
+      "unique_tools_mean": 6.0
+    }
+  },
+  "trace_samples": {
+    "contextual_efe_discounted_we_0.45": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "The user wants to convert 100 Celsius to Fahrenheit.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 0,
+        "task_id": "api_bank_unit_convert",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency and age.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 1,
+        "task_id": "bfcl_ticket_rank",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-07-01?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 2,
+        "task_id": "bfcl_date_gap",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 3,
+        "task_id": "api_bank_date_diff",
+        "tool_output": {
+          "days": 28
+        }
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "The user asks to count words in the sentence routing tools requires evidence.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 4,
+        "task_id": "api_bank_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "The user asks for 20 percent of 350.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 5,
+        "task_id": "api_bank_calculator",
+        "tool_output": {
+          "value": 70.0
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "The user wants an incident queue ordered by severity.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 6,
+        "task_id": "api_bank_ticket_ranker",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read profile.plan.name from this JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 7,
+        "task_id": "bfcl_json_lookup",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: tools learn from exact traces.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 8,
+        "task_id": "bfcl_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Add invoice line items 10, 5, and 2.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.775,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 9,
+        "task_id": "normalized_math_sum",
+        "tool_output": {
+          "value": 17.0
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 5 miles to kilometers.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 10,
+        "task_id": "normalized_unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "The user wants metrics.latency.p95 from a service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 11,
+        "task_id": "api_bank_json_lookup",
+        "tool_output": null
+      }
+    ],
+    "contextual_efe_static_we_0.45": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "The user wants to convert 100 Celsius to Fahrenheit.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 0,
+        "task_id": "api_bank_unit_convert",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency and age.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 1,
+        "task_id": "bfcl_ticket_rank",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-07-01?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 2,
+        "task_id": "bfcl_date_gap",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 3,
+        "task_id": "api_bank_date_diff",
+        "tool_output": {
+          "days": 28
+        }
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "The user asks to count words in the sentence routing tools requires evidence.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 4,
+        "task_id": "api_bank_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "The user asks for 20 percent of 350.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 5,
+        "task_id": "api_bank_calculator",
+        "tool_output": {
+          "value": 70.0
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "The user wants an incident queue ordered by severity.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 6,
+        "task_id": "api_bank_ticket_ranker",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read profile.plan.name from this JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 7,
+        "task_id": "bfcl_json_lookup",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: tools learn from exact traces.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 8,
+        "task_id": "bfcl_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Add invoice line items 10, 5, and 2.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.775,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 9,
+        "task_id": "normalized_math_sum",
+        "tool_output": {
+          "value": 17.0
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 5 miles to kilometers.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 10,
+        "task_id": "normalized_unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "The user wants metrics.latency.p95 from a service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 11,
+        "task_id": "api_bank_json_lookup",
+        "tool_output": null
+      }
+    ],
+    "contextual_epsilon_0.10": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "The user wants to convert 100 Celsius to Fahrenheit.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 0,
+        "task_id": "api_bank_unit_convert",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency and age.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 1,
+        "task_id": "bfcl_ticket_rank",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-07-01?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 2,
+        "task_id": "bfcl_date_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 3,
+        "task_id": "api_bank_date_diff",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "The user asks to count words in the sentence routing tools requires evidence.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 4,
+        "task_id": "api_bank_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "The user asks for 20 percent of 350.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 5,
+        "task_id": "api_bank_calculator",
+        "tool_output": {
+          "value": 70.0
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "The user wants an incident queue ordered by severity.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 6,
+        "task_id": "api_bank_ticket_ranker",
+        "tool_output": {
+          "ordered_ids": [
+            "I0",
+            "I2",
+            "I1"
+          ]
+        }
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read profile.plan.name from this JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.5,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 7,
+        "task_id": "bfcl_json_lookup",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: tools learn from exact traces.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 8,
+        "task_id": "bfcl_text_stats",
+        "tool_output": {
+          "characters": 29,
+          "unique_words": 5,
+          "words": 5
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Add invoice line items 10, 5, and 2.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 1.0,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 9,
+        "task_id": "normalized_math_sum",
+        "tool_output": {
+          "value": 17.0
+        }
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 5 miles to kilometers.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 10,
+        "task_id": "normalized_unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "The user wants metrics.latency.p95 from a service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.5,
+          "json_lookup": 0.5,
+          "text_stats": 0.5,
+          "ticket_ranker": 0.5,
+          "unit_convert": 0.5
+        },
+        "step": 11,
+        "task_id": "api_bank_json_lookup",
+        "tool_output": null
+      }
+    ],
+    "contextual_ucb_2.0": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "The user wants to convert 100 Celsius to Fahrenheit.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 0,
+        "task_id": "api_bank_unit_convert",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency and age.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 1,
+        "task_id": "bfcl_ticket_rank",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-07-01?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 2,
+        "task_id": "bfcl_date_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 3,
+        "task_id": "api_bank_date_diff",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "The user asks to count words in the sentence routing tools requires evidence.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 4,
+        "task_id": "api_bank_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "The user asks for 20 percent of 350.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 5,
+        "task_id": "api_bank_calculator",
+        "tool_output": {
+          "value": 70.0
+        }
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "The user wants an incident queue ordered by severity.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 6,
+        "task_id": "api_bank_ticket_ranker",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read profile.plan.name from this JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 7,
+        "task_id": "bfcl_json_lookup",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: tools learn from exact traces.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 8,
+        "task_id": "bfcl_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Add invoice line items 10, 5, and 2.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 9,
+        "task_id": "normalized_math_sum",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 5 miles to kilometers.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 10,
+        "task_id": "normalized_unit_distance",
+        "tool_output": {
+          "value": 8.0467
+        }
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "The user wants metrics.latency.p95 from a service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 11,
+        "task_id": "api_bank_json_lookup",
+        "tool_output": null
+      }
+    ],
+    "global_efe_we_0.45": [
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "The user wants to convert 100 Celsius to Fahrenheit.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.7250000000000001,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 0,
+        "task_id": "api_bank_unit_convert",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency and age.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.7250000000000001,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 1,
+        "task_id": "bfcl_ticket_rank",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: document",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-07-01?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.7250000000000001,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 2,
+        "task_id": "bfcl_date_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.7250000000000001,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 3,
+        "task_id": "api_bank_date_diff",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: tickets",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "The user asks to count words in the sentence routing tools requires evidence.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.225,
+          "ticket_ranker": 0.7250000000000001,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 4,
+        "task_id": "api_bank_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "The user asks for 20 percent of 350.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.225,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.7250000000000001
+        },
+        "step": 5,
+        "task_id": "api_bank_calculator",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "The user wants an incident queue ordered by severity.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.225,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.225,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 6,
+        "task_id": "api_bank_ticket_ranker",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read profile.plan.name from this JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.15,
+          "date_diff": 0.225,
+          "json_lookup": 0.225,
+          "text_stats": 0.225,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 7,
+        "task_id": "bfcl_json_lookup",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: document",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: tools learn from exact traces.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.15,
+          "date_diff": 0.15,
+          "json_lookup": 0.225,
+          "text_stats": 0.225,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 8,
+        "task_id": "bfcl_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Add invoice line items 10, 5, and 2.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.15,
+          "date_diff": 0.15,
+          "json_lookup": 0.15,
+          "text_stats": 0.225,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 9,
+        "task_id": "normalized_math_sum",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: tickets",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 5 miles to kilometers.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.15,
+          "date_diff": 0.15,
+          "json_lookup": 0.15,
+          "text_stats": 0.15,
+          "ticket_ranker": 0.225,
+          "unit_convert": 0.225
+        },
+        "step": 10,
+        "task_id": "normalized_unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "The user wants metrics.latency.p95 from a service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {
+          "calculator": 0.15,
+          "date_diff": 0.15,
+          "json_lookup": 0.15,
+          "text_stats": 0.15,
+          "ticket_ranker": 0.15,
+          "unit_convert": 0.225
+        },
+        "step": 11,
+        "task_id": "api_bank_json_lookup",
+        "tool_output": null
+      }
+    ],
+    "random": [
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "The user wants to convert 100 Celsius to Fahrenheit.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 0,
+        "task_id": "api_bank_unit_convert",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: value",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency and age.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 1,
+        "task_id": "bfcl_ticket_rank",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-07-01?",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 2,
+        "task_id": "bfcl_date_gap",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 3,
+        "task_id": "api_bank_date_diff",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: tickets",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "The user asks to count words in the sentence routing tools requires evidence.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 4,
+        "task_id": "api_bank_text_stats",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "The user asks for 20 percent of 350.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 5,
+        "task_id": "api_bank_calculator",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: start_date",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "The user wants an incident queue ordered by severity.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 6,
+        "task_id": "api_bank_ticket_ranker",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read profile.plan.name from this JSON profile.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 7,
+        "task_id": "bfcl_json_lookup",
+        "tool_output": null
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: tools learn from exact traces.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {},
+        "step": 8,
+        "task_id": "bfcl_text_stats",
+        "tool_output": {
+          "characters": 29,
+          "unique_words": 5,
+          "words": 5
+        }
+      },
+      {
+        "error": "Missing required argument: text",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Add invoice line items 10, 5, and 2.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 9,
+        "task_id": "normalized_math_sum",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: tickets",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 5 miles to kilometers.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 10,
+        "task_id": "normalized_unit_distance",
+        "tool_output": null
+      },
+      {
+        "error": "Missing required argument: operation",
+        "exact_result": false,
+        "execution_success": false,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "The user wants metrics.latency.p95 from a service JSON.",
+        "reward": 0.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": false,
+        "selector_scores": {},
+        "step": 11,
+        "task_id": "api_bank_json_lookup",
+        "tool_output": null
+      }
+    ],
+    "schema_keyword_router": [
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "The user wants to convert 100 Celsius to Fahrenheit.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "celsius",
+            "to_unit": "fahrenheit",
+            "value": 100
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 3.0
+        },
+        "step": 0,
+        "task_id": "api_bank_unit_convert",
+        "tool_output": {
+          "value": 212.0
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "Rank these support tickets by urgency and age.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 9,
+                "id": "S2",
+                "priority": "medium"
+              },
+              {
+                "age_hours": 2,
+                "id": "S0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 5,
+                "id": "S1",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 3.0,
+          "unit_convert": 0.0
+        },
+        "step": 1,
+        "task_id": "bfcl_ticket_rank",
+        "tool_output": {
+          "ordered_ids": [
+            "S0",
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "How many days are between 2026-06-15 and 2026-07-01?",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-07-01",
+            "start_date": "2026-06-15"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 2.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 2,
+        "task_id": "bfcl_date_gap",
+        "tool_output": {
+          "days": 16
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "family": "date",
+        "prompt": "The user asks for the days from 2026-08-01 to 2026-08-29.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "end_date": "2026-08-29",
+            "start_date": "2026-08-01"
+          },
+          "tool": "date_diff"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 1.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 3,
+        "task_id": "api_bank_date_diff",
+        "tool_output": {
+          "days": 28
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "The user asks to count words in the sentence routing tools requires evidence.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "routing tools requires evidence"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 2.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 4,
+        "task_id": "api_bank_text_stats",
+        "tool_output": {
+          "characters": 31,
+          "unique_words": 4,
+          "words": 4
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "The user asks for 20 percent of 350.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "percentage",
+            "values": [
+              350,
+              20
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 1.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 5,
+        "task_id": "api_bank_calculator",
+        "tool_output": {
+          "value": 70.0
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "family": "ticket",
+        "prompt": "The user wants an incident queue ordered by severity.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "tickets": [
+              {
+                "age_hours": 4,
+                "id": "I1",
+                "priority": "low"
+              },
+              {
+                "age_hours": 1,
+                "id": "I0",
+                "priority": "critical"
+              },
+              {
+                "age_hours": 8,
+                "id": "I2",
+                "priority": "high"
+              }
+            ]
+          },
+          "tool": "ticket_ranker"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 2.0,
+          "unit_convert": 0.0
+        },
+        "step": 6,
+        "task_id": "api_bank_ticket_ranker",
+        "tool_output": {
+          "ordered_ids": [
+            "I0",
+            "I2",
+            "I1"
+          ]
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "Read profile.plan.name from this JSON profile.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "profile": {
+                "plan": {
+                  "name": "research"
+                }
+              }
+            },
+            "path": "profile.plan.name"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 2.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 7,
+        "task_id": "bfcl_json_lookup",
+        "tool_output": {
+          "value": "research"
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "family": "text",
+        "prompt": "Count text statistics for: tools learn from exact traces.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "text": "tools learn from exact traces"
+          },
+          "tool": "text_stats"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 2.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 8,
+        "task_id": "bfcl_text_stats",
+        "tool_output": {
+          "characters": 29,
+          "unique_words": 5,
+          "words": 5
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "family": "math",
+        "prompt": "Add invoice line items 10, 5, and 2.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "operation": "sum",
+            "values": [
+              10,
+              5,
+              2
+            ]
+          },
+          "tool": "calculator"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 1.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 9,
+        "task_id": "normalized_math_sum",
+        "tool_output": {
+          "value": 17.0
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "family": "unit",
+        "prompt": "Convert 5 miles to kilometers.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "from_unit": "mile",
+            "to_unit": "kilometer",
+            "value": 5
+          },
+          "tool": "unit_convert"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 0.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 2.0
+        },
+        "step": 10,
+        "task_id": "normalized_unit_distance",
+        "tool_output": {
+          "value": 8.0467
+        }
+      },
+      {
+        "error": null,
+        "exact_result": true,
+        "execution_success": true,
+        "expected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "family": "json",
+        "prompt": "The user wants metrics.latency.p95 from a service JSON.",
+        "reward": 1.0,
+        "selected_call": {
+          "arguments": {
+            "document": {
+              "metrics": {
+                "latency": {
+                  "p95": 188
+                }
+              }
+            },
+            "path": "metrics.latency.p95"
+          },
+          "tool": "json_lookup"
+        },
+        "selected_correct_tool": true,
+        "selector_scores": {
+          "calculator": 0.0,
+          "date_diff": 0.0,
+          "json_lookup": 1.0,
+          "text_stats": 0.0,
+          "ticket_ranker": 0.0,
+          "unit_convert": 0.0
+        },
+        "step": 11,
+        "task_id": "api_bank_json_lookup",
+        "tool_output": {
+          "value": 188
+        }
+      }
+    ]
+  }
+}
