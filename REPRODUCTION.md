@@ -57,6 +57,7 @@ python papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py --limi
 ```
 
 This downloads official BFCL v3 simple rows and possible answers at run time, then reformulates the first 100 rows as a schema-routing diagnostic over a 92-function candidate pool. This is not an official BFCL score.
+The saved JSON omits prompt-level BFCL trace samples by default; add `--include-traces` only for local debugging.
 
 Expected summary:
 

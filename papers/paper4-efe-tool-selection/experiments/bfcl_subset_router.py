@@ -414,6 +414,7 @@ def run_benchmark(
     trials: int,
     seed: int,
     trace_limit: int,
+    include_traces: bool,
     timeout: int,
 ) -> Mapping[str, Any]:
     tasks, tools, load_metadata = load_bfcl_subset(
@@ -427,6 +428,7 @@ def run_benchmark(
     effective_trials = trials or len(tasks)
     all_runs = []
     trace_samples = {}
+    effective_trace_limit = trace_limit if include_traces else 0
     for run_idx in range(runs):
         for router in make_routers():
             result = run_one_router(
@@ -435,11 +437,12 @@ def run_benchmark(
                 tools=tools,
                 trials=effective_trials,
                 seed=seed + run_idx,
-                trace_limit=trace_limit,
+                trace_limit=effective_trace_limit,
             )
             all_runs.append({key: value for key, value in result.items() if key != "traces"})
-            trace_samples.setdefault(str(result["router"]), result["traces"])
-    return {
+            if include_traces:
+                trace_samples.setdefault(str(result["router"]), result["traces"])
+    payload: Dict[str, Any] = {
         "metadata": {
             "description": "Paper 4 BFCL subset schema-routing diagnostic",
             "benchmark_type": "bfcl_subset_schema_routing",
@@ -456,12 +459,20 @@ def run_benchmark(
             "runs": runs,
             "trials_per_run": effective_trials,
             "seed": seed,
+            "include_traces": include_traces,
+            "trace_limit": effective_trace_limit,
+            "trace_policy": (
+                "Prompt-level BFCL examples are omitted by default. Use --include-traces "
+                "for local debugging only."
+            ),
             **load_metadata,
         },
         "summary": summarize_runs(all_runs),
         "runs": all_runs,
-        "trace_samples": trace_samples,
     }
+    if include_traces:
+        payload["trace_samples"] = trace_samples
+    return payload
 
 
 def write_results(payload: Mapping[str, Any], output_dir: Path) -> Path:
@@ -498,6 +509,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--trials", type=int, default=0, help="0 means one pass over loaded tasks.")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--trace-limit", type=int, default=12)
+    parser.add_argument(
+        "--include-traces",
+        action="store_true",
+        help=(
+            "Persist prompt-level trace samples. Disabled by default so public result "
+            "artifacts do not bundle external benchmark examples."
+        ),
+    )
     parser.add_argument("--timeout", type=int, default=60)
     parser.add_argument(
         "--output-dir",
@@ -517,6 +536,7 @@ def main() -> None:
         trials=args.trials,
         seed=args.seed,
         trace_limit=args.trace_limit,
+        include_traces=args.include_traces,
         timeout=args.timeout,
     )
     output_path = write_results(payload, args.output_dir)

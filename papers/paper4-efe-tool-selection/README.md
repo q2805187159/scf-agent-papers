@@ -18,6 +18,8 @@ python papers/paper4-efe-tool-selection/experiments/external_function_call_adapt
 python papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py --limit 100 --runs 10 --seed 42 --trace-limit 12
 ```
 
+The BFCL subset command writes summary metrics by default and omits prompt-level trace samples. Add `--include-traces` only for local debugging.
+
 ## Boundaries
 
 These artifacts are BFCL/API-Bank-style local diagnostics plus a BFCL subset schema-routing diagnostic. They are not official BFCL, API-Bank, APIBench, ToolBench, or AgentBench scores.

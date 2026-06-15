@@ -35,6 +35,8 @@ python papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py --limi
 
 These are BFCL/API-Bank-style local artifacts and external schema-routing diagnostics. They are not official BFCL, ToolBench, API-Bank, APIBench, or AgentBench scores.
 
+The BFCL subset runner omits prompt-level trace samples from JSON outputs by default. Use `--include-traces` only for local debugging when you explicitly want to inspect examples downloaded at run time.
+
 ## Repository Boundary
 
 Do not add manuscript drafts, LaTeX sources, PDFs, private runtime code, local machine paths, credentials, or unpublished implementation internals to this repository.
