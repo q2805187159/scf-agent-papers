@@ -71,9 +71,34 @@ Expected summary:
 | history-only EFE | 0.6% | 0.6 / 100 |
 | random | 0.3% | 0.3 / 100 |
 
+## P0 Runtime Acceptance Artifact
+
+Verify the public result artifact:
+
+```bash
+python papers/p0-runtime-acceptance/verify_p0_acceptance.py
+```
+
+Expected verifier output has `"ok": true` and `passed` equal to `total`.
+
+Current public-safe summary:
+
+| Diagnostic | Target | Result |
+| --- | ---: | ---: |
+| CLS long-session retention | >=0.90 | 1.00 |
+| Preparedness-success Pearson | >=0.60 | 0.987 |
+| Causal utility precision/recall | >=0.70/0.70 | 1.00/1.00 |
+| Physical ablation toggles | subsystem state changes | pass |
+| End-to-end p95 latency | <1000 ms | 0.390 ms |
+| Real tool task suite | >=0.80 | 1.00 |
+| Stability success rate | >=0.95 | 1.00 |
+
+These are local P0 runtime acceptance diagnostics from the private runtime repository, not external benchmark scores.
+
 ## Claim Boundaries
 
 - Do not claim Paper 4 is submitted, accepted, or workshop-ready.
 - Do not claim EFE is generally superior to all baselines.
 - Do not describe the local function-calling benchmark, external adapter, or BFCL subset schema-routing diagnostic as an official BFCL, ToolBench, API-Bank, APIBench, or AgentBench score.
 - Do not describe simulated routing as a real external-agent benchmark.
+- Do not describe P0 runtime acceptance diagnostics as production load tests or official external benchmark results.

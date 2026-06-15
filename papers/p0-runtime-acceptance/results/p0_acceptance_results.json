@@ -1,0 +1,202 @@
+{
+  "source": "paper/experiments/p0-acceptance/p0_acceptance_suite.py",
+  "suite_version": "p0_acceptance_v1",
+  "summary": {
+    "all_passed": true,
+    "passed": 7,
+    "total": 7
+  },
+  "tests": [
+    {
+      "details": {
+        "facts": 5,
+        "hits": 5,
+        "num_turns": 60,
+        "per_fact": {
+          "Authentication uses JWT": true,
+          "Database is PostgreSQL": true,
+          "Documentation target is docs/v3": true,
+          "Project codename is Atlas": true,
+          "Test command is pytest": true
+        }
+      },
+      "metric": "cls_long_session_retention",
+      "passed": true,
+      "target": 0.9,
+      "value": 1.0
+    },
+    {
+      "details": {
+        "scores": [
+          0.7710333333333333,
+          0.5105,
+          0.45970000000000005,
+          0.7689499999999999,
+          0.1125,
+          0.7477166666666667,
+          0.5781000000000001,
+          0.11875000000000001
+        ],
+        "success_labels": [
+          1.0,
+          0.45,
+          0.4,
+          1.0,
+          0.0,
+          1.0,
+          0.7,
+          0.0
+        ]
+      },
+      "metric": "preparedness_success_pearson",
+      "passed": true,
+      "target": 0.6,
+      "value": 0.9871318637315115
+    },
+    {
+      "details": {
+        "expected": [
+          "mem_k0",
+          "mem_k1"
+        ],
+        "predicted": [
+          "mem_k0",
+          "mem_k1"
+        ],
+        "ranked": [
+          [
+            "mem_k0",
+            0.2685672809895833
+          ],
+          [
+            "mem_k1",
+            0.19925959557291664
+          ],
+          [
+            "tool_analyze_code",
+            0.15594229218750003
+          ],
+          [
+            "ws_current_file",
+            0.12128844947916667
+          ],
+          [
+            "mem_k3",
+            0.034653842708333334
+          ]
+        ]
+      },
+      "metric": "causal_utility_key_block_detection",
+      "passed": true,
+      "target": {
+        "precision": 0.7,
+        "recall": 0.7
+      },
+      "value": {
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "details": {
+        "no_causal_utility_no_updates": true,
+        "no_cls_uses_simple_memory": true,
+        "no_efe_uses_ucb": true,
+        "no_preparedness_disabled_score": true
+      },
+      "metric": "physical_ablation_summary",
+      "passed": true,
+      "target": "all physical toggles reflected in subsystem state",
+      "value": {
+        "full_system": {
+          "causal_utility_updated": true,
+          "causal_utility_updates": 1,
+          "memory_class": "CLSMemorySystem",
+          "preparedness_score": 0.6270833333333333,
+          "selector_class": "SimpleEFESelector",
+          "success": true
+        },
+        "no_causal_utility": {
+          "causal_utility_updated": false,
+          "causal_utility_updates": 0,
+          "memory_class": "CLSMemorySystem",
+          "preparedness_score": 0.6270833333333333,
+          "selector_class": "SimpleEFESelector",
+          "success": true
+        },
+        "no_cls": {
+          "causal_utility_updated": true,
+          "causal_utility_updates": 1,
+          "memory_class": "SimpleMemorySystem",
+          "preparedness_score": 0.6270833333333333,
+          "selector_class": "SimpleEFESelector",
+          "success": true
+        },
+        "no_efe": {
+          "causal_utility_updated": true,
+          "causal_utility_updates": 1,
+          "memory_class": "CLSMemorySystem",
+          "preparedness_score": 0.6270833333333333,
+          "selector_class": "UCBSelector",
+          "success": true
+        },
+        "no_preparedness": {
+          "causal_utility_updated": true,
+          "causal_utility_updates": 1,
+          "memory_class": "CLSMemorySystem",
+          "preparedness_score": 0.0,
+          "selector_class": "SimpleEFESelector",
+          "success": true
+        }
+      }
+    },
+    {
+      "details": {
+        "failures": 0,
+        "max": 0.39029999970807694,
+        "median": 0.2459499974065693,
+        "min": 0.179899998329347,
+        "num_trials": 20
+      },
+      "metric": "end_to_end_latency_p95_ms",
+      "passed": true,
+      "target": 1000.0,
+      "value": 0.39029999970807694
+    },
+    {
+      "details": {
+        "code_analysis": true,
+        "edit_dry_run": true,
+        "file_read": true,
+        "multi_turn_memory": true,
+        "search": true,
+        "test_run": true,
+        "tool_failure_recovery": true
+      },
+      "metric": "real_tool_task_suite",
+      "passed": true,
+      "target": 0.8,
+      "value": 1.0
+    },
+    {
+      "details": {
+        "failures": 0,
+        "num_trials": 30
+      },
+      "metric": "stability_success_rate",
+      "passed": true,
+      "target": 0.95,
+      "value": 1.0
+    }
+  ],
+  "thresholds": {
+    "causal_utility_precision": 0.7,
+    "causal_utility_recall": 0.7,
+    "cls_long_session_retention": 0.9,
+    "end_to_end_latency_p95_ms": 1000.0,
+    "preparedness_success_pearson": 0.6,
+    "real_tool_task_suite": 0.8,
+    "stability_success_rate": 0.95
+  },
+  "timestamp": "2026-06-15T18:03:56"
+}
