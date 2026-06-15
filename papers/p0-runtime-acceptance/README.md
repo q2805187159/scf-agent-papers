@@ -23,7 +23,7 @@ Summary:
 | Preparedness-success Pearson | >= 0.60 | 0.987 |
 | Causal utility precision/recall | >= 0.70 / >= 0.70 | 1.00 / 1.00 |
 | Physical ablation toggles | subsystem state changes | pass |
-| End-to-end p95 latency | < 1000 ms | 0.390 ms |
+| End-to-end p95 latency | < 1000 ms | 0.303 ms |
 | Real tool task suite | >= 0.80 | 1.00 |
 | Stability success rate | >= 0.95 | 1.00 |
 
