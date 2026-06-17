@@ -15,9 +15,12 @@ This repository intentionally does **not** publish full manuscript drafts, LaTeX
 
 ## Status
 
-- Paper 1 is not submitted or posted.
+- Paper 1 is publicly posted as a ResearchGate preprint only.
+  - DOI: `10.13140/RG.2.2.28965.05605`
+  - Page: `https://www.researchgate.net/publication/407184214_SCF_Agent_V3_A_Neuroscience-Inspired_Cognitive_Architecture_for_Long-Horizon_AI_Agents`
+  - Boundary: not venue-submitted, not peer-reviewed, and not accepted.
 - Paper 4 is not submitted or accepted.
-- This repository is not an archival preprint and should not be cited as a complete paper draft.
+- This repository itself is not an archival preprint and should not be cited as a complete paper draft. Cite the ResearchGate DOI/page for Paper 1 instead.
 
 ## Reproduction
 

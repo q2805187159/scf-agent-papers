@@ -1,10 +1,11 @@
 # Paper Posting and Submission Checklist
 
-Last updated: 2026-06-15
+Last updated: 2026-06-17
 
-Paper 1 and Paper 4 are both not submitted or posted yet. This checklist reflects the current route:
+Paper 1 has been publicly posted as a ResearchGate preprint. Paper 4 is not submitted or posted yet. This checklist reflects the current route:
 
-- Paper 1: strengthen the manuscript and experiments before any public posting or non-arXiv venue submission. arXiv is not the current route because endorsement/access is unavailable.
+- Paper 1: ResearchGate preprint v0.1 is public under DOI `10.13140/RG.2.2.28965.05605`; continue strengthening the manuscript and experiments before any venue submission. arXiv is not the current route because endorsement/access is unavailable.
+- Paper 1 page: `https://www.researchgate.net/publication/407184214_SCF_Agent_V3_A_Neuroscience-Inspired_Cognitive_Architecture_for_Long-Horizon_AI_Agents`
 - Paper 4: prepare for the NeurIPS 2026 tool-learning / agent tool-use workshop direction. Verify the exact official workshop name, template, page limit, anonymity rule, and deadline before submission.
 
 ## Global Gates
@@ -14,7 +15,7 @@ Paper 1 and Paper 4 are both not submitted or posted yet. This checklist reflect
 - [ ] Statistical tests run in a locked environment with `scipy`.
 - [ ] LaTeX compiles without errors in a real TeX environment or Overleaf.
 - [ ] Limitations updated after final result regeneration.
-- [ ] No arXiv ID, platform DOI, accepted status, or submitted status is claimed before it actually exists.
+- [ ] No arXiv ID, accepted status, submitted status, or platform DOI beyond the recorded ResearchGate DOI is claimed before it actually exists.
 - [ ] Deleted stale reports and old draft snapshots are not recreated.
 
 ## Paper 1 Preprint Gates
@@ -25,18 +26,18 @@ Current state:
 - Exp2 EFE result is promising in the seeded diagnostic: EFE 72.1 +/- 25.4 versus epsilon-greedy 53.4 +/- 19.4, p=0.0025.
 - Exp3 CLS retention currently recalls 50/50 facts with 100.0% final retention.
 - Exp4 legacy mock suite is saturated: SCF 100.0%, baseline 100.0%; treat it as a smoke test only.
-- Exp4 harder diagnostic is now available: SCF 82.1%, baseline 34.6% over 78 rubric-graded tasks, with channel-level ablations.
+- Exp4 harder diagnostic is now available: SCF 75.6%, baseline 34.6% over 78 rubric-graded tasks, mean score 0.903 versus 0.571, with channel-level ablations.
 
-Required before public posting or submission:
+Required before any revised preprint version or venue submission:
 
 - [ ] Re-run Paper 1 after any code change and archive the latest JSON result file.
 - [ ] Confirm every figure used by `latex/main.tex` comes from the latest run.
 - [ ] Confirm the abstract does not claim baseline superiority in Exp4.
-- [ ] Confirm the manuscript says "preprint draft" or "manuscript draft", not "accepted" or "submitted".
+- [ ] Confirm the manuscript says "ResearchGate preprint" or "manuscript draft", not "accepted" or "submitted".
 - [ ] Prepare a source bundle from `paper/paper1-architecture/latex/`.
 - [ ] Remove any venue/platform-specific language until the author selects the actual target.
 
-Recommended strengthening before public posting:
+Recommended strengthening before venue submission:
 
 - [ ] Replace the current harder diagnostic with external/non-mock tool tasks before making broad superiority claims.
 - [ ] Convert the current channel-level ablations into physical component-removal ablations if the paper needs stronger causal evidence.
@@ -68,7 +69,7 @@ Required before NeurIPS 2026 workshop submission:
 ## Prohibited Claims
 
 - [ ] "Accepted" / "submitted" before real submission.
-- [ ] Platform DOI before DOI exists.
+- [ ] Platform DOI beyond the recorded ResearchGate DOI before it exists.
 - [ ] "arXiv preprint" while arXiv is not the selected route.
 - [ ] "EFE significantly outperforms all baselines."
 - [ ] "Paper 4 has proven O(log T) regret."
