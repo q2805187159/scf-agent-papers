@@ -350,15 +350,15 @@
     {
       "details": {
         "failures": 0,
-        "max": 234.86129999218974,
-        "median": 223.59110000252258,
-        "min": 217.31850001378916,
+        "max": 363.35100000724196,
+        "median": 324.84825000574347,
+        "min": 271.92240000294987,
         "num_trials": 20
       },
       "metric": "end_to_end_latency_p95_ms",
       "passed": true,
       "target": 1000.0,
-      "value": 234.86129999218974
+      "value": 363.35100000724196
     },
     {
       "details": {
@@ -398,5 +398,5 @@
     "real_tool_task_suite": 0.8,
     "stability_success_rate": 0.95
   },
-  "timestamp": "2026-06-17T09:24:00"
+  "timestamp": "2026-06-17T10:27:16"
 }

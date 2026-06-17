@@ -30,7 +30,7 @@ Summary:
 | Causal utility precision/recall (selection-based) | >= 0.70 / >= 0.70 | 1.00 / 1.00 |
 | Counterfactual causal utility precision/recall | >= 0.70 / >= 0.70 | 1.00 / 1.00 |
 | Physical ablation toggles | subsystem state changes | pass |
-| End-to-end p95 latency | < 1000 ms | 234.861 ms |
+| End-to-end p95 latency | < 1000 ms | 363.351 ms |
 | Real tool task suite | >= 0.80 | 1.00 |
 | Stability success rate | >= 0.95 | 1.00 |
 
