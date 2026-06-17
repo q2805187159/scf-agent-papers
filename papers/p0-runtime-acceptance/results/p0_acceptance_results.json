@@ -3,8 +3,8 @@
   "suite_version": "p0_acceptance_v1",
   "summary": {
     "all_passed": true,
-    "passed": 7,
-    "total": 7
+    "passed": 9,
+    "total": 9
   },
   "tests": [
     {
@@ -27,31 +27,200 @@
     },
     {
       "details": {
+        "diagnostic": "docs_v3_experiment_1_prediction_error_decay",
+        "final_surprise": 1.0436748752729041e-06,
+        "head_mean": 0.037666565164800006,
+        "head_window": 10,
+        "initial_surprise": 0.11699999999999999,
+        "max_final_surprise_ratio": 0.3,
+        "num_observations": 50,
+        "observation": "Task completed successfully: deterministic repeated observation ok",
+        "processor": "HierarchicalPredictionProcessor",
+        "surprise_series": [
+          0.11699999999999999,
+          0.06786,
+          0.05639400000000001,
+          0.047010600000000013,
+          0.0239616,
+          0.01916928000000001,
+          0.015335424000000014,
+          0.012268339200000006,
+          0.009814671359999999,
+          0.007851737087999994,
+          0.006281389670399984,
+          0.005025111736319976,
+          0.004020089389055986,
+          0.0032160715112447835,
+          0.0025728572089958324,
+          0.0020582857671966603,
+          0.0016466286137573338,
+          0.0013173028910058726,
+          0.001053842312804698,
+          0.000843073850243764,
+          0.0006744590801950057,
+          0.0005395672641559934,
+          0.0004316538113247892,
+          0.00034532304905982025,
+          0.00027625843924786175,
+          0.0002210067513983005,
+          0.0001768054011186404,
+          0.00014144432089491232,
+          0.00011315545671591876,
+          9.052436537274056e-05,
+          7.241949229819244e-05,
+          5.7935593838542854e-05,
+          4.6348475070845385e-05,
+          3.707878005668186e-05,
+          2.9663024045334385e-05,
+          2.3730419236256406e-05,
+          1.8984335388994023e-05,
+          1.5187468311195218e-05,
+          1.2149974648961726e-05,
+          9.719979719158278e-06,
+          7.775983775326623e-06,
+          6.220787020255747e-06,
+          4.976629616210149e-06,
+          3.98130369297367e-06,
+          3.185042954378936e-06,
+          2.548034363503149e-06,
+          2.038427490802519e-06,
+          1.6307419926364641e-06,
+          1.304593594098069e-06,
+          1.0436748752729041e-06
+        ],
+        "tail_mean": 3.470521937545823e-06,
+        "tail_window": 10
+      },
+      "metric": "prediction_error_decay",
+      "passed": true,
+      "target": 0.3,
+      "value": {
+        "decay_ratio": 0.9999910797019207,
+        "final_surprise": 1.0436748752729041e-06,
+        "final_to_initial_ratio": 8.920298079255592e-06,
+        "tail_to_head_ratio": 9.213799884224857e-05
+      }
+    },
+    {
+      "details": {
+        "label_source": "real_tool_trace",
         "scores": [
-          0.7710333333333333,
-          0.5105,
-          0.45970000000000005,
-          0.7689499999999999,
-          0.1125,
-          0.7477166666666667,
-          0.5781000000000001,
-          0.11875000000000001
+          0.76935,
+          0.5525288461538461,
+          0.6887884615384616,
+          0.7989166666666666,
+          0.506576923076923,
+          0.7975277777777778,
+          0.8117542735042735
         ],
         "success_labels": [
           1.0,
-          0.45,
-          0.4,
+          0.5,
+          0.25,
           1.0,
           0.0,
           1.0,
-          0.7,
-          0.0
+          0.75
+        ],
+        "synthetic_labels": false,
+        "tool_traces": [
+          {
+            "intent": "debug auth.py authentication issue",
+            "label_components": {
+              "evidence_present": true,
+              "tool_available": true,
+              "tool_executed": true,
+              "tool_success": true,
+              "workspace_present": true
+            },
+            "label_source": "real_tool_trace",
+            "preparedness_score": 0.76935,
+            "success_label": 1.0
+          },
+          {
+            "intent": "debug auth.py authentication issue no tool",
+            "label_components": {
+              "evidence_present": true,
+              "tool_available": false,
+              "tool_executed": false,
+              "tool_success": false,
+              "workspace_present": true
+            },
+            "label_source": "real_tool_trace",
+            "preparedness_score": 0.5525288461538461,
+            "success_label": 0.5
+          },
+          {
+            "intent": "debug auth.py authentication issue no evidence",
+            "label_components": {
+              "evidence_present": false,
+              "tool_available": true,
+              "tool_executed": true,
+              "tool_success": true,
+              "workspace_present": false
+            },
+            "label_source": "real_tool_trace",
+            "preparedness_score": 0.6887884615384616,
+            "success_label": 0.25
+          },
+          {
+            "intent": "analyze parser.py parse logic",
+            "label_components": {
+              "evidence_present": true,
+              "tool_available": true,
+              "tool_executed": true,
+              "tool_success": true,
+              "workspace_present": true
+            },
+            "label_source": "real_tool_trace",
+            "preparedness_score": 0.7989166666666666,
+            "success_label": 1.0
+          },
+          {
+            "intent": "vague task",
+            "label_components": {
+              "evidence_present": false,
+              "tool_available": false,
+              "tool_executed": false,
+              "tool_success": false,
+              "workspace_present": false
+            },
+            "label_source": "real_tool_trace",
+            "preparedness_score": 0.506576923076923,
+            "success_label": 0.0
+          },
+          {
+            "intent": "search database config",
+            "label_components": {
+              "evidence_present": true,
+              "tool_available": true,
+              "tool_executed": true,
+              "tool_success": true,
+              "workspace_present": true
+            },
+            "label_source": "real_tool_trace",
+            "preparedness_score": 0.7975277777777778,
+            "success_label": 1.0
+          },
+          {
+            "intent": "review parser.py logic",
+            "label_components": {
+              "evidence_present": true,
+              "tool_available": true,
+              "tool_executed": true,
+              "tool_success": true,
+              "workspace_present": false
+            },
+            "label_source": "real_tool_trace",
+            "preparedness_score": 0.8117542735042735,
+            "success_label": 0.75
+          }
         ]
       },
       "metric": "preparedness_success_pearson",
       "passed": true,
       "target": 0.6,
-      "value": 0.9871318637315115
+      "value": 0.8369684263588442
     },
     {
       "details": {
@@ -99,6 +268,34 @@
     },
     {
       "details": {
+        "actual_key_blocks": 2,
+        "diagnostic": "minimal_traceeval_counterfactual_removal",
+        "distractor_blocks_unnecessary": true,
+        "full_preparedness": 0.7440833333333333,
+        "full_success": true,
+        "key_blocks_necessary": true,
+        "no_distractor_preparedness": 0.7997916666666667,
+        "no_distractor_success": true,
+        "no_key_preparedness": 0.7025,
+        "no_key_success": false,
+        "predicted_key_blocks": 2,
+        "preparedness_drop_ratio": 0.05588531750475974,
+        "relative_drop_threshold": 0.05,
+        "success_threshold": 0.65
+      },
+      "metric": "counterfactual_causal_utility_key_block_recovery",
+      "passed": true,
+      "target": {
+        "precision": 0.7,
+        "recall": 0.7
+      },
+      "value": {
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "details": {
         "no_causal_utility_no_updates": true,
         "no_cls_uses_simple_memory": true,
         "no_efe_uses_ucb": true,
@@ -112,7 +309,7 @@
           "causal_utility_updated": true,
           "causal_utility_updates": 1,
           "memory_class": "CLSMemorySystem",
-          "preparedness_score": 0.6270833333333333,
+          "preparedness_score": 0.6139102564102564,
           "selector_class": "SimpleEFESelector",
           "success": true
         },
@@ -120,7 +317,7 @@
           "causal_utility_updated": false,
           "causal_utility_updates": 0,
           "memory_class": "CLSMemorySystem",
-          "preparedness_score": 0.6270833333333333,
+          "preparedness_score": 0.6139102564102564,
           "selector_class": "SimpleEFESelector",
           "success": true
         },
@@ -128,7 +325,7 @@
           "causal_utility_updated": true,
           "causal_utility_updates": 1,
           "memory_class": "SimpleMemorySystem",
-          "preparedness_score": 0.6270833333333333,
+          "preparedness_score": 0.6139102564102564,
           "selector_class": "SimpleEFESelector",
           "success": true
         },
@@ -136,7 +333,7 @@
           "causal_utility_updated": true,
           "causal_utility_updates": 1,
           "memory_class": "CLSMemorySystem",
-          "preparedness_score": 0.6270833333333333,
+          "preparedness_score": 0.6139102564102564,
           "selector_class": "UCBSelector",
           "success": true
         },
@@ -153,15 +350,15 @@
     {
       "details": {
         "failures": 0,
-        "max": 0.3032000022358261,
-        "median": 0.23780000083206687,
-        "min": 0.17869999646791257,
+        "max": 234.86129999218974,
+        "median": 223.59110000252258,
+        "min": 217.31850001378916,
         "num_trials": 20
       },
       "metric": "end_to_end_latency_p95_ms",
       "passed": true,
       "target": 1000.0,
-      "value": 0.3032000022358261
+      "value": 234.86129999218974
     },
     {
       "details": {
@@ -193,10 +390,13 @@
     "causal_utility_precision": 0.7,
     "causal_utility_recall": 0.7,
     "cls_long_session_retention": 0.9,
+    "counterfactual_causal_utility_precision": 0.7,
+    "counterfactual_causal_utility_recall": 0.7,
     "end_to_end_latency_p95_ms": 1000.0,
+    "prediction_error_decay_ratio": 0.3,
     "preparedness_success_pearson": 0.6,
     "real_tool_task_suite": 0.8,
     "stability_success_rate": 0.95
   },
-  "timestamp": "2026-06-15T18:06:43"
+  "timestamp": "2026-06-17T09:24:00"
 }

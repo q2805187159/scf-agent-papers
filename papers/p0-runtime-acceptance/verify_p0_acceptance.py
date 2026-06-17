@@ -11,8 +11,10 @@ RESULT_PATH = Path(__file__).resolve().parent / "results" / "p0_acceptance_resul
 
 REQUIRED_METRICS = {
     "cls_long_session_retention",
+    "prediction_error_decay",
     "preparedness_success_pearson",
     "causal_utility_key_block_detection",
+    "counterfactual_causal_utility_key_block_recovery",
     "physical_ablation_summary",
     "end_to_end_latency_p95_ms",
     "real_tool_task_suite",
