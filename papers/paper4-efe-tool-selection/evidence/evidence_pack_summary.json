@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-06-18",
+  "source_private_runtime_commit": "2cfeb3a80ee0b2236a8132af53f50a1aeb728a73",
+  "evidence_pack_ready": true,
+  "paper_ready": false,
+  "tables_generated": [
+    "table1_baselines",
+    "table2_ablation",
+    "table3_long_trace",
+    "table4_counterfactual",
+    "table5_official_status"
+  ],
+  "total_rows": {
+    "table1_baselines": 3,
+    "table2_ablation": 8,
+    "table3_long_trace": 10,
+    "table4_counterfactual": 1,
+    "table5_official_status": 3
+  },
+  "disclaimer": "Materials are local diagnostics, official-compatible fixtures, or user-supplied local evaluations. They are not official benchmark submissions or leaderboard results."
+}

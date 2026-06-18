@@ -1,0 +1,20 @@
+[
+  {
+    "Total Interventions": 40,
+    "Outcomes Changed": 30,
+    "Success Drops": 30,
+    "Success Drop Rate": 0.75,
+    "Avg Utility Delta": -0.75,
+    "Labeled Interventions": 40,
+    "True Positive": 30,
+    "False Positive": 0,
+    "False Negative": 0,
+    "True Negative": 10,
+    "Critical Precision": 1.0,
+    "Critical Recall": 1.0,
+    "Critical Specificity": 1.0,
+    "Critical F1": 1.0,
+    "Non-selected Distractor Removals": 10,
+    "Benchmark Type": "local_diagnostic"
+  }
+]

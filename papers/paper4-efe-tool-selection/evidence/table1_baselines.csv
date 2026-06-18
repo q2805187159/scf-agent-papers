@@ -1,0 +1,4 @@
+Baseline,Accuracy,Execution Success,Mean Latency (ms),Benchmark Type
+random,0.35,1.0,0.0008999995770864189,local_fixture
+schema_match,0.95,1.0,0.02481499977875501,local_fixture
+affordance_weighted,0.95,1.0,0.018315001216251403,local_fixture

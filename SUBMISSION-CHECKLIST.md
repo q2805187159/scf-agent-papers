@@ -31,10 +31,10 @@ Current state:
 Required before any revised preprint version or venue submission:
 
 - [ ] Re-run Paper 1 after any code change and archive the latest JSON result file.
-- [ ] Confirm every figure used by `latex/main.tex` comes from the latest run.
+- [ ] Confirm every figure used by the private manuscript source comes from the latest run.
 - [ ] Confirm the abstract does not claim baseline superiority in Exp4.
 - [ ] Confirm the manuscript says "ResearchGate preprint" or "manuscript draft", not "accepted" or "submitted".
-- [ ] Prepare a source bundle from `paper/paper1-architecture/latex/`.
+- [ ] Prepare a private manuscript source bundle when a venue submission target is selected.
 - [ ] Remove any venue/platform-specific language until the author selects the actual target.
 
 Recommended strengthening before venue submission:
@@ -57,7 +57,7 @@ Current state:
 Required before NeurIPS 2026 workshop submission:
 
 - [ ] Verify the official workshop name and deadline.
-- [ ] Convert `latex/main_v2.1_fixed.tex` to the workshop template once available.
+- [ ] Convert the private Paper 4 manuscript source to the workshop template once available.
 - [ ] Keep the thesis mixed/diagnostic: static settings favor simple baselines, while contextual non-stationarity is the current positive niche.
 - [ ] Preserve the epistemic-only/pragmatic-only sensitivity table in the final manuscript.
 - [ ] Preserve the contextual routing and non-stationary tool-quality task if claiming tool-learning relevance.

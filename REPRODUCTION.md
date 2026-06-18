@@ -1,8 +1,18 @@
 # Reproduction Guide
 
-Last updated: 2026-06-15
+Last updated: 2026-06-18
 
 This repository is artifact-only. It intentionally excludes LaTeX sources and manuscript PDFs.
+
+## Paper 4 Evidence Pack
+
+The current public-safe Paper 4 evidence pack is under:
+
+```text
+papers/paper4-efe-tool-selection/evidence/
+```
+
+It contains table-ready CSV/JSON summaries and claim-boundary text generated from the private runtime. These files are local diagnostics or official-compatible artifacts only; they are not official benchmark submissions or leaderboard results.
 
 ## Local Executable Function Calling
 
@@ -56,7 +66,7 @@ Run from repository root:
 python papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py --limit 100 --runs 10 --seed 42 --trace-limit 12
 ```
 
-This downloads official BFCL v3 simple rows and possible answers at run time, then reformulates the first 100 rows as a schema-routing diagnostic over a 92-function candidate pool. This is not an official BFCL score.
+This optional command may use external BFCL-format rows when available, then reformulates rows as a schema-routing diagnostic. This is not an official BFCL score.
 The saved JSON omits prompt-level BFCL trace samples by default; add `--include-traces` only for local debugging.
 
 Expected summary:
@@ -86,10 +96,12 @@ Current public-safe summary:
 | Diagnostic | Target | Result |
 | --- | ---: | ---: |
 | CLS long-session retention | >=0.90 | 1.00 |
-| Preparedness-success Pearson | >=0.60 | 0.987 |
+| Prediction-error decay | <=0.30 | 8.92e-06 final/initial |
+| Preparedness-success Pearson | >=0.60 | 0.837 |
 | Causal utility precision/recall | >=0.70/0.70 | 1.00/1.00 |
+| Counterfactual causal utility precision/recall | >=0.70/0.70 | 1.00/1.00 |
 | Physical ablation toggles | subsystem state changes | pass |
-| End-to-end p95 latency | <1000 ms | 0.303 ms |
+| End-to-end p95 latency | <1000 ms | 800.318 ms |
 | Real tool task suite | >=0.80 | 1.00 |
 | Stability success rate | >=0.95 | 1.00 |
 

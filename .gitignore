@@ -21,5 +21,13 @@ venv/
 *.out
 *.synctex.gz
 
+# Manuscript/source boundary
+*.tex
+*.bib
+*.pdf
+manuscripts/
+drafts/
+latex/
+
 # Generated result scratch
 papers/**/experiments/results/tmp/

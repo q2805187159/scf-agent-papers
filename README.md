@@ -8,9 +8,10 @@ This repository intentionally does **not** publish full manuscript drafts, LaTeX
 
 - `papers/paper4-efe-tool-selection/experiments/real_tool_benchmark.py`: self-contained executable function-calling benchmark.
 - `papers/paper4-efe-tool-selection/experiments/external_function_call_adapter.py`: normalized/BFCL-like/API-Bank-like JSONL adapter smoke test.
-- `papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py`: run-time downloader and schema-routing diagnostic for official BFCL v3 simple rows.
+- `papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py`: optional external schema-routing diagnostic for BFCL-format rows; not an official score.
 - `papers/paper4-efe-tool-selection/experiments/fixtures/bfcl_api_bank_style_sample.jsonl`: small public fixture for adapter verification.
 - `papers/paper4-efe-tool-selection/experiments/results/`: generated JSON result artifacts.
+- `papers/paper4-efe-tool-selection/evidence/`: sanitized Paper 4 table-ready evidence pack generated from the private runtime.
 - `papers/p0-runtime-acceptance/`: public-safe P0 runtime acceptance result artifact and JSON verifier.
 
 ## Status
@@ -30,7 +31,7 @@ Local executable function-calling:
 python papers/paper4-efe-tool-selection/experiments/real_tool_benchmark.py --runs 50 --trials 240 --seed 42 --trace-limit 12
 ```
 
-External adapter smoke test:
+External adapter smoke test and optional schema-routing diagnostic:
 
 ```bash
 python papers/paper4-efe-tool-selection/experiments/external_function_call_adapter.py --rounds 20 --seed 42 --trace-limit 12
@@ -43,9 +44,9 @@ P0 runtime acceptance artifact verification:
 python papers/p0-runtime-acceptance/verify_p0_acceptance.py
 ```
 
-These are BFCL/API-Bank-style local artifacts and external schema-routing diagnostics. They are not official BFCL, ToolBench, API-Bank, APIBench, or AgentBench scores.
+These are BFCL/API-Bank-style local artifacts and optional external schema-routing diagnostics. They are not official BFCL, ToolBench, API-Bank, APIBench, AgentBench, TraceEval, or leaderboard scores.
 
-The BFCL subset runner omits prompt-level trace samples from JSON outputs by default. Use `--include-traces` only for local debugging when you explicitly want to inspect examples downloaded at run time.
+The BFCL subset runner omits prompt-level trace samples from JSON outputs by default. Use `--include-traces` only for local debugging. If network access or user-supplied official-format files are unavailable, rely on the local evidence pack instead.
 
 The P0 runtime acceptance artifact contains result JSON only; it does not publish the private runtime source used to generate it.
 

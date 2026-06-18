@@ -1,0 +1,82 @@
+[
+  {
+    "Scenario": "File Operations Chain",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 5,
+    "Completed": 5,
+    "Tools Correct": 5,
+    "Success": true
+  },
+  {
+    "Scenario": "Research and Documentation",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 7,
+    "Completed": 7,
+    "Tools Correct": 7,
+    "Success": true
+  },
+  {
+    "Scenario": "Code Development Workflow",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 8,
+    "Completed": 8,
+    "Tools Correct": 8,
+    "Success": true
+  },
+  {
+    "Scenario": "Multi-Task Coordination",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Success": true
+  },
+  {
+    "Scenario": "Data Analysis Pipeline",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 10,
+    "Completed": 10,
+    "Tools Correct": 10,
+    "Success": true
+  },
+  {
+    "Scenario": "Debugging Session",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 5,
+    "Completed": 5,
+    "Tools Correct": 5,
+    "Success": true
+  },
+  {
+    "Scenario": "Content Creation Workflow",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 7,
+    "Completed": 7,
+    "Tools Correct": 7,
+    "Success": true
+  },
+  {
+    "Scenario": "System Monitoring",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Success": true
+  },
+  {
+    "Scenario": "Project Setup",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 8,
+    "Completed": 8,
+    "Tools Correct": 8,
+    "Success": true
+  },
+  {
+    "Scenario": "Knowledge Base Query",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 5,
+    "Completed": 5,
+    "Tools Correct": 5,
+    "Success": true
+  }
+]

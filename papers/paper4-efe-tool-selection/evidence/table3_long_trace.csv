@@ -1,0 +1,11 @@
+Scenario,Runner Mode,Turns,Completed,Tools Correct,Success
+File Operations Chain,local_selector_executor,5,5,5,True
+Research and Documentation,local_selector_executor,7,7,7,True
+Code Development Workflow,local_selector_executor,8,8,8,True
+Multi-Task Coordination,local_selector_executor,6,6,6,True
+Data Analysis Pipeline,local_selector_executor,10,10,10,True
+Debugging Session,local_selector_executor,5,5,5,True
+Content Creation Workflow,local_selector_executor,7,7,7,True
+System Monitoring,local_selector_executor,6,6,6,True
+Project Setup,local_selector_executor,8,8,8,True
+Knowledge Base Query,local_selector_executor,5,5,5,True

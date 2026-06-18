@@ -1,0 +1,2 @@
+Total Interventions,Outcomes Changed,Success Drops,Success Drop Rate,Avg Utility Delta,Labeled Interventions,True Positive,False Positive,False Negative,True Negative,Critical Precision,Critical Recall,Critical Specificity,Critical F1,Non-selected Distractor Removals,Benchmark Type
+40,30,30,0.75,-0.75,40,30,0,0,10,1.0,1.0,1.0,1.0,10,local_diagnostic
