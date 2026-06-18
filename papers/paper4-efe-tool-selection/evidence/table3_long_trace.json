@@ -5,7 +5,13 @@
     "Turns": 5,
     "Completed": 5,
     "Tools Correct": 5,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Research and Documentation",
@@ -13,7 +19,13 @@
     "Turns": 7,
     "Completed": 7,
     "Tools Correct": 7,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Code Development Workflow",
@@ -21,7 +33,13 @@
     "Turns": 8,
     "Completed": 8,
     "Tools Correct": 8,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Multi-Task Coordination",
@@ -29,7 +47,13 @@
     "Turns": 6,
     "Completed": 6,
     "Tools Correct": 6,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Data Analysis Pipeline",
@@ -37,7 +61,13 @@
     "Turns": 10,
     "Completed": 10,
     "Tools Correct": 10,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Debugging Session",
@@ -45,7 +75,13 @@
     "Turns": 5,
     "Completed": 5,
     "Tools Correct": 5,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Content Creation Workflow",
@@ -53,7 +89,13 @@
     "Turns": 7,
     "Completed": 7,
     "Tools Correct": 7,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "System Monitoring",
@@ -61,7 +103,13 @@
     "Turns": 6,
     "Completed": 6,
     "Tools Correct": 6,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Project Setup",
@@ -69,7 +117,13 @@
     "Turns": 8,
     "Completed": 8,
     "Tools Correct": 8,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   },
   {
     "Scenario": "Knowledge Base Query",
@@ -77,6 +131,152 @@
     "Turns": 5,
     "Completed": 5,
     "Tools Correct": 5,
-    "Success": true
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Customer Support Escalation",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Perturbation Types": "context_block_removal",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 2,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Flaky API Recovery",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Perturbation Types": "tool_replacement",
+    "Flaky Tool Calls": 1,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 1,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Security Review Readonly",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 5,
+    "Completed": 5,
+    "Tools Correct": 5,
+    "Perturbation Types": "tool_removal",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 1,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Browser Research Citation",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 1,
+    "Workspace State Dependencies": 1,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Git Review Without Push",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 1,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Spreadsheet Report Pipeline",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 1,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Translation Email Staging",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 5,
+    "Completed": 5,
+    "Tools Correct": 5,
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 1,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "MCP Tool Routing",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Executive Goal Switching",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 5,
+    "Completed": 5,
+    "Tools Correct": 5,
+    "Perturbation Types": "preparedness_transition",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 1,
+    "Workspace State Dependencies": 0,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
+  },
+  {
+    "Scenario": "Banking Safety Readonly",
+    "Runner Mode": "local_selector_executor",
+    "Turns": 6,
+    "Completed": 6,
+    "Tools Correct": 6,
+    "Perturbation Types": "",
+    "Flaky Tool Calls": 0,
+    "Memory Dependencies": 0,
+    "Workspace State Dependencies": 1,
+    "Success": true,
+    "Benchmark Type": "long_trace_local_diagnostic",
+    "Claim Boundary": "local deterministic trace diagnostic; not external tool execution"
   }
 ]

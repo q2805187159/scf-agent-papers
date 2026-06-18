@@ -1,0 +1,28 @@
+[
+  {
+    "Replay Mode": "exact",
+    "Benchmark Type": "trace_replay_local_diagnostic",
+    "Total Traces": 20,
+    "Original Successes": 20,
+    "Replay Successes": 20,
+    "Counterfactual Successes": 20,
+    "Outcomes Changed": 0,
+    "Avg Utility Delta": 0.0,
+    "Mean Latency (ms)": 0.01,
+    "P95 Latency (ms)": 0.01,
+    "Claim Boundary": "local trace replay diagnostic; not official TraceEval"
+  },
+  {
+    "Replay Mode": "fast_context_block_removal",
+    "Benchmark Type": "trace_replay_context_removal_local_diagnostic",
+    "Total Traces": 20,
+    "Original Successes": 20,
+    "Replay Successes": 0,
+    "Counterfactual Successes": 0,
+    "Outcomes Changed": 20,
+    "Avg Utility Delta": -1.0,
+    "Mean Latency (ms)": 0.01,
+    "P95 Latency (ms)": 0.01,
+    "Claim Boundary": "local trace replay diagnostic; not official TraceEval"
+  }
+]

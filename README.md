@@ -11,7 +11,7 @@ This repository intentionally does **not** publish full manuscript drafts, LaTeX
 - `papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py`: optional external schema-routing diagnostic for BFCL-format rows; not an official score.
 - `papers/paper4-efe-tool-selection/experiments/fixtures/bfcl_api_bank_style_sample.jsonl`: small public fixture for adapter verification.
 - `papers/paper4-efe-tool-selection/experiments/results/`: generated JSON result artifacts.
-- `papers/paper4-efe-tool-selection/evidence/`: sanitized Paper 4 table-ready evidence pack generated from the private runtime.
+- `papers/paper4-efe-tool-selection/evidence/`: sanitized Paper 4 table-ready evidence pack generated from the private runtime. The current pack has 8 CSV/JSON tables, including 53 local categorical EFE diagnostic rows, 20 long-trace scenario rows, and a 5-seed bandit-style baseline comparison.
 - `papers/p0-runtime-acceptance/`: public-safe P0 runtime acceptance result artifact and JSON verifier.
 
 ## Status
@@ -21,6 +21,7 @@ This repository intentionally does **not** publish full manuscript drafts, LaTeX
   - Page: `https://www.researchgate.net/publication/407184214_SCF_Agent_V3_A_Neuroscience-Inspired_Cognitive_Architecture_for_Long-Horizon_AI_Agents`
   - Boundary: not venue-submitted, not peer-reviewed, and not accepted.
 - Paper 4 is not submitted or accepted.
+- Paper 4's public evidence pack is strengthened for manuscript work, but its generated summary still marks `paper4_ready` as `false`.
 - This repository itself is not an archival preprint and should not be cited as a complete paper draft. Cite the ResearchGate DOI/page for Paper 1 instead.
 
 ## Reproduction

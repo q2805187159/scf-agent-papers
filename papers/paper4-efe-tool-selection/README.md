@@ -9,7 +9,7 @@ This directory contains public-safe experiment artifacts for the Paper 4 tool-se
 - `experiments/bfcl_subset_router.py`: optional BFCL-format schema-routing diagnostic; not an official BFCL score.
 - `experiments/fixtures/bfcl_api_bank_style_sample.jsonl`: small smoke-test fixture.
 - `experiments/results/`: generated JSON outputs.
-- `evidence/`: sanitized Paper 4 table-ready evidence pack from the private runtime.
+- `evidence/`: sanitized Paper 4 table-ready evidence pack from the private runtime. The current pack contains 8 CSV/JSON tables: local fixture baselines, ablations, 20 long-trace scenarios, counterfactual utility, official-format ingestion status, 53 categorical EFE diagnostic rows, trace replay modes, and a 5-seed bandit-style comparison.
 
 ## Commands
 
@@ -24,3 +24,5 @@ The BFCL subset command writes summary metrics by default and omits prompt-level
 ## Boundaries
 
 These artifacts are BFCL/API-Bank-style local diagnostics plus optional BFCL-format schema-routing diagnostics. They are not official BFCL, API-Bank, APIBench, ToolBench, AgentBench, TraceEval, or leaderboard scores. Paper 4 is not submitted or accepted.
+
+The evidence pack summary intentionally marks `paper4_ready` as `false`; it is for manuscript evidence development, not a submission-ready or peer-reviewed claim.

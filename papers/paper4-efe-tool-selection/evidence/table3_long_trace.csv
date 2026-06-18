@@ -1,11 +1,21 @@
-Scenario,Runner Mode,Turns,Completed,Tools Correct,Success
-File Operations Chain,local_selector_executor,5,5,5,True
-Research and Documentation,local_selector_executor,7,7,7,True
-Code Development Workflow,local_selector_executor,8,8,8,True
-Multi-Task Coordination,local_selector_executor,6,6,6,True
-Data Analysis Pipeline,local_selector_executor,10,10,10,True
-Debugging Session,local_selector_executor,5,5,5,True
-Content Creation Workflow,local_selector_executor,7,7,7,True
-System Monitoring,local_selector_executor,6,6,6,True
-Project Setup,local_selector_executor,8,8,8,True
-Knowledge Base Query,local_selector_executor,5,5,5,True
+Scenario,Runner Mode,Turns,Completed,Tools Correct,Perturbation Types,Flaky Tool Calls,Memory Dependencies,Workspace State Dependencies,Success,Benchmark Type,Claim Boundary
+File Operations Chain,local_selector_executor,5,5,5,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Research and Documentation,local_selector_executor,7,7,7,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Code Development Workflow,local_selector_executor,8,8,8,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Multi-Task Coordination,local_selector_executor,6,6,6,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Data Analysis Pipeline,local_selector_executor,10,10,10,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Debugging Session,local_selector_executor,5,5,5,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Content Creation Workflow,local_selector_executor,7,7,7,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+System Monitoring,local_selector_executor,6,6,6,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Project Setup,local_selector_executor,8,8,8,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Knowledge Base Query,local_selector_executor,5,5,5,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Customer Support Escalation,local_selector_executor,6,6,6,context_block_removal,0,2,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Flaky API Recovery,local_selector_executor,6,6,6,tool_replacement,1,0,1,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Security Review Readonly,local_selector_executor,5,5,5,tool_removal,0,0,1,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Browser Research Citation,local_selector_executor,6,6,6,,0,1,1,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Git Review Without Push,local_selector_executor,6,6,6,,0,0,1,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Spreadsheet Report Pipeline,local_selector_executor,6,6,6,,0,0,1,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Translation Email Staging,local_selector_executor,5,5,5,,0,1,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+MCP Tool Routing,local_selector_executor,6,6,6,,0,0,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Executive Goal Switching,local_selector_executor,5,5,5,preparedness_transition,0,1,0,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution
+Banking Safety Readonly,local_selector_executor,6,6,6,,0,0,1,True,long_trace_local_diagnostic,local deterministic trace diagnostic; not external tool execution

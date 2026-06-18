@@ -14,6 +14,21 @@ papers/paper4-efe-tool-selection/evidence/
 
 It contains table-ready CSV/JSON summaries and claim-boundary text generated from the private runtime. These files are local diagnostics or official-compatible artifacts only; they are not official benchmark submissions or leaderboard results.
 
+Current sanitized table set:
+
+| Table | Rows | Scope |
+| --- | ---: | --- |
+| table1_baselines | 3 | local fixture baseline summary |
+| table2_ablation | 8 | local diagnostic ablation matrix |
+| table3_long_trace | 20 | local long-trace scenario summary, 124 total turns |
+| table4_counterfactual | 1 | local counterfactual utility summary |
+| table5_official_status | 3 | optional official-format ingestion status |
+| table6_real_efe | 53 | categorical Dirichlet EFE local diagnostic decomposition |
+| table7_trace_replay_modes | 2 | local exact/fast trace replay mode summary |
+| table8_bandit_comparison | 6 | 5-seed local comparison against bandit-style baselines |
+
+`papers/paper4-efe-tool-selection/evidence/evidence_pack_summary.json` intentionally has `paper4_ready: false`; the pack supports manuscript development but is not a submission-ready or peer-reviewed artifact.
+
 ## Local Executable Function Calling
 
 Run from repository root:

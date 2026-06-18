@@ -1,21 +1,28 @@
 {
-  "generated_at": "2026-06-18",
-  "source_private_runtime_commit": "2cfeb3a80ee0b2236a8132af53f50a1aeb728a73",
-  "evidence_pack_ready": true,
-  "paper_ready": false,
+  "generated_at": "deterministic",
   "tables_generated": [
     "table1_baselines",
     "table2_ablation",
     "table3_long_trace",
     "table4_counterfactual",
-    "table5_official_status"
+    "table5_official_status",
+    "table6_real_efe",
+    "table7_trace_replay_modes",
+    "table8_bandit_comparison"
   ],
   "total_rows": {
     "table1_baselines": 3,
     "table2_ablation": 8,
-    "table3_long_trace": 10,
+    "table3_long_trace": 20,
     "table4_counterfactual": 1,
-    "table5_official_status": 3
+    "table5_official_status": 3,
+    "table6_real_efe": 53,
+    "table7_trace_replay_modes": 2,
+    "table8_bandit_comparison": 6
   },
-  "disclaimer": "Materials are local diagnostics, official-compatible fixtures, or user-supplied local evaluations. They are not official benchmark submissions or leaderboard results."
+  "artifact_directory": "papers/paper4-efe-tool-selection/evidence",
+  "paper4_evidence_pack_generated": true,
+  "paper4_ready": false,
+  "paper4_status": "Evidence pack is strengthened for manuscript work, but Paper4 still needs official/user-supplied external evaluation and human review before any submission-ready claim.",
+  "disclaimer": "Materials are local diagnostics, official-compatible fixtures, or user-supplied local evaluations. They are NOT official benchmark submissions or leaderboard results."
 }

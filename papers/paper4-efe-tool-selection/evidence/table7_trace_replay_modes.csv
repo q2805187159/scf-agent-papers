@@ -1,0 +1,3 @@
+Replay Mode,Benchmark Type,Total Traces,Original Successes,Replay Successes,Counterfactual Successes,Outcomes Changed,Avg Utility Delta,Mean Latency (ms),P95 Latency (ms),Claim Boundary
+exact,trace_replay_local_diagnostic,20,20,20,20,0,0.0,0.01,0.01,local trace replay diagnostic; not official TraceEval
+fast_context_block_removal,trace_replay_context_removal_local_diagnostic,20,20,0,0,20,-1.0,0.01,0.01,local trace replay diagnostic; not official TraceEval
