@@ -53,7 +53,7 @@ Current state:
 - Theory diagnostics do not establish convergence/proof claims.
 - Simulated routing shows diversity but not success advantage.
 - Local executable function-calling now exists as a BFCL-style artifact, but it is not an official BFCL, ToolBench, API-Bank, or AgentBench score.
-- The public sanitized evidence pack now contains 8 table-ready CSV/JSON artifacts, including 53 categorical EFE local diagnostic rows, 20 local long-trace scenarios, trace replay mode diagnostics, and a 5-seed bandit-style comparison. The generated evidence summary still marks `paper4_ready` as `false`.
+- The public sanitized evidence pack now contains 10 table-ready CSV/JSON table families, including 53 categorical EFE local diagnostic rows, 53 candidate-ranked EFE decision trace rows, 20 local long-trace scenarios, trace replay mode diagnostics, latency trend summaries, user-supplied local BFCL ingestion status, and a 5-seed bandit-style comparison. The generated evidence summary still marks `paper4_ready` as `false`.
 
 Required before NeurIPS 2026 workshop submission:
 

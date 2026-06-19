@@ -11,7 +11,7 @@ This repository intentionally does **not** publish full manuscript drafts, LaTeX
 - `papers/paper4-efe-tool-selection/experiments/bfcl_subset_router.py`: optional external schema-routing diagnostic for BFCL-format rows; not an official score.
 - `papers/paper4-efe-tool-selection/experiments/fixtures/bfcl_api_bank_style_sample.jsonl`: small public fixture for adapter verification.
 - `papers/paper4-efe-tool-selection/experiments/results/`: generated JSON result artifacts.
-- `papers/paper4-efe-tool-selection/evidence/`: sanitized Paper 4 table-ready evidence pack generated from the private runtime. The current pack has 8 CSV/JSON tables, including 53 local categorical EFE diagnostic rows, 20 long-trace scenario rows, and a 5-seed bandit-style baseline comparison.
+- `papers/paper4-efe-tool-selection/evidence/`: sanitized Paper 4 table-ready evidence pack generated from the private runtime. The current pack has 10 CSV/JSON table families, including 53 local categorical EFE diagnostic rows, 53 candidate-ranked EFE decision trace rows, 20 long-trace scenario rows, latency trend summaries, user-supplied local BFCL ingestion status, and a 5-seed bandit-style baseline comparison.
 - `papers/p0-runtime-acceptance/`: public-safe P0 runtime acceptance result artifact and JSON verifier.
 
 ## Status

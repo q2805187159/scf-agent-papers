@@ -3,21 +3,21 @@
     "Baseline": "random",
     "Accuracy": 0.35,
     "Execution Success": 1.0,
-    "Mean Latency (ms)": 0.0009449999197386205,
+    "Mean Latency (ms)": 0.001290000363951549,
     "Benchmark Type": "local_fixture"
   },
   {
     "Baseline": "schema_match",
     "Accuracy": 0.95,
     "Execution Success": 1.0,
-    "Mean Latency (ms)": 0.018444999477651436,
+    "Mean Latency (ms)": 0.017250000200874638,
     "Benchmark Type": "local_fixture"
   },
   {
     "Baseline": "affordance_weighted",
     "Accuracy": 0.95,
     "Execution Success": 1.0,
-    "Mean Latency (ms)": 0.016584999866608996,
+    "Mean Latency (ms)": 0.016939999841270037,
     "Benchmark Type": "local_fixture"
   }
 ]

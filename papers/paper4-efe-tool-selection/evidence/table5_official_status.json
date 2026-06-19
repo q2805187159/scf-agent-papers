@@ -1,10 +1,11 @@
 [
   {
     "Dataset": "BFCL Simple",
-    "Status": "Not available (file not found)",
-    "Accuracy": "N/A",
-    "Tasks": 0,
-    "Note": "User must manually download"
+    "Status": "User-supplied local evaluation",
+    "Accuracy": 1.0,
+    "Tasks": 400,
+    "Label Source": "inferred_single_function_candidate: 400",
+    "Note": "NOT official submission or leaderboard score"
   },
   {
     "Dataset": "API-Bank",

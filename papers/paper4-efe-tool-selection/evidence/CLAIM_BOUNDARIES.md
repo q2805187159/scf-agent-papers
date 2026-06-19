@@ -5,13 +5,15 @@
 
 1. **Local Diagnostic Results**:
    - 20 local fixtures covering diverse domains
-   - 40 BFCL-compatible tasks (official_compatible_subset format)
+   - 100 BFCL-compatible tasks (official_compatible_subset format)
    - 53 categorical Dirichlet EFE local diagnostic scenarios across 10 scenario families
    - 20 local multi-turn long-trace scenarios (5-20 turns each) with computed same-domain tool selection
    - 124 total turns across long-trace evaluation
    - 40 counterfactual interventions with critical/non-critical utility metrics
    - 8 ablation conditions tested across 3 seeds, including 7 required ablations plus an executive-control extension
    - 5-seed local bandit comparison over EFE, epsilon-greedy, UCB, Thompson, schema-match, and affordance-weighted selectors
+   - Candidate-ranked EFE decision traces with posterior-update summaries for 53 local diagnostic scenarios
+   - Latency trend summaries across P0, local fixture, official-compatible, and user-supplied local runners
 
 2. **Methodological**:
    - BFCL-compatible format (structure matches BFCL simple)
@@ -19,6 +21,7 @@
    - Trace capture and replay system implemented
    - Executive Control metadata in traces
    - Multiple seeds for statistical validation (no cherry-picking)
+   - EFE decision traces expose candidate ranking, posterior-after-observation maps, expected posterior distributions, and beta weights
 
 3. **Architecture**:
    - CLS memory system vs SimpleMemory comparison
@@ -68,7 +71,7 @@
 ## Recommended Phrasing
 
 ### Good Examples:
-- "We evaluate on 40 tasks in BFCL-compatible format"
+- "We evaluate on 100 tasks in BFCL-compatible format"
 - "Local diagnostic results show X% accuracy"
 - "Tested with official_compatible_subset (not official submission)"
 - "Ablation study demonstrates component Y contributes Z"
@@ -76,7 +79,9 @@
 - "The ingestion bridge can locally evaluate user-supplied official-format JSONL files, but these are not official submissions"
 - "A local diagnostic distinguishes categorical EFE behavior from UCB/count-proxy behavior in bounded scenarios"
 - "Multi-seed local bandit comparison reports reward, pseudo-regret, safety, and nonstationary recovery diagnostics"
+- "Candidate-ranked EFE decision traces expose posterior updates and beta-weighted EFE decomposition"
 - "Trace replay mode diagnostics are local ExecutionTrace replays, not official TraceEval results"
+- "Latency trend summaries are local machine diagnostics and not official benchmark scores"
 
 ### Bad Examples (Avoid):
 - "We achieve X% on BFCL benchmark" (implies official)

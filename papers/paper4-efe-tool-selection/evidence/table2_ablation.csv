@@ -1,9 +1,9 @@
 Condition,Runner Mode,Success Rate Mean,Success Rate Std,Latency Mean (ms),Latency Std (ms),Preparedness Mean,Preparedness Std,Causal Updates Mean,Context Blocks Mean,RPE Mean,Approximation
-full,real_turn_orchestrator_mock_tools,1.0,0.0,0.25135999797688174,0.045752159375642934,0.7213677756410256,0.0023989683945805193,10.0,7.400000000000001,0.8995099999999999,
-no_prediction,real_turn_orchestrator_mock_tools,1.0,0.0,0.22249666508287191,0.01721267861936822,0.7202635719373219,0.0020935068220470227,10.0,7.400000000000001,0.8995099999999999,Maps to orchestrator prediction_lr=0.0 to freeze cognitive value updates
-no_cls,real_turn_orchestrator_mock_tools,1.0,0.0,0.22661999488870302,0.013778057942543403,0.7186124333624709,0.0,10.0,8.4,0.8995099999999999,
-no_preparedness,real_turn_orchestrator_mock_tools,1.0,0.0,0.2536666695959866,0.028002543660083923,0.0,0.0,10.0,7.400000000000001,0.8995099999999999,
-no_causal_utility,real_turn_orchestrator_mock_tools,1.0,0.0,0.25738666008692235,0.04754438880726031,0.7192534237891737,0.0010356364484678273,0.0,7.400000000000001,0.8995099999999999,
-fixed_exploration,real_turn_orchestrator_mock_tools,1.0,0.0,0.23893333273008466,0.025955644380251823,0.6902948029736468,0.00016013349679867478,10.0,7.400000000000001,0.6513215599,
-no_executive_control,real_turn_orchestrator_mock_tools,1.0,0.0,0.21557666380734494,0.009555527389940803,0.7210558774928776,0.00020955569097505763,10.0,7.400000000000001,0.8995099999999999,Matches current default runtime; contrasted with executive_control extension
-executive_control,real_turn_orchestrator_mock_tools,1.0,0.0,0.2412299974821508,0.03049795489388628,0.7190036923076923,0.001556967547212403,10.0,7.400000000000001,0.8995099999999999,
+full,real_turn_orchestrator_mock_tools,1.0,0.0,2.6022300002296106,0.0,0.6901687591722242,0.0,10.0,7.4,0.85341,
+no_prediction,real_turn_orchestrator_mock_tools,1.0,0.0,2.445139999690582,0.0,0.6901687591722242,0.0,10.0,7.4,0.85341,Maps to orchestrator prediction_lr=0.0 to freeze cognitive value updates
+no_cls,real_turn_orchestrator_mock_tools,1.0,0.0,2.8746800000590156,0.0,0.6859864769047287,0.0,10.0,8.4,0.85341,
+no_preparedness,real_turn_orchestrator_mock_tools,1.0,0.0,2.4708300001293537,0.0,0.0,0.0,10.0,7.4,0.85341,
+no_causal_utility,real_turn_orchestrator_mock_tools,1.0,0.0,2.4544600000808714,0.0,0.6901687591722242,0.0,0.0,7.4,0.85341,
+fixed_exploration,real_turn_orchestrator_mock_tools,1.0,0.0,2.5758599998880527,0.0,0.6901687591722242,0.0,10.0,7.4,0.85341,
+no_executive_control,real_turn_orchestrator_mock_tools,1.0,0.0,3.3387599998604856,0.0,0.6901687591722242,0.0,10.0,7.4,0.85341,Matches current default runtime; contrasted with executive_control extension
+executive_control,real_turn_orchestrator_mock_tools,1.0,0.0,2.4355200001082267,0.0,0.6901687591722242,0.0,10.0,7.4,0.85341,
